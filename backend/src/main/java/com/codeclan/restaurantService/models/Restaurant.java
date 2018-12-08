@@ -3,7 +3,7 @@ package com.codeclan.restaurantService.models;
 import java.util.ArrayList;
 
 //@Entity
-//@Table(name = "restuarants")
+//@Table(name = "restaurants")
 public class Restaurant {
 
 //    @Id
