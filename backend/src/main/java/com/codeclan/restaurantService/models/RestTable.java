@@ -18,7 +18,7 @@ public class RestTable {
     @Column(name = "max_covers")
     private int maxCovers;
 
-    @OneToMany(mappedBy = "booking")
+    @OneToMany(mappedBy = "restTable")
     private List<Booking> bookings;
 
     public RestTable(int tableNumber, int maxCovers) {

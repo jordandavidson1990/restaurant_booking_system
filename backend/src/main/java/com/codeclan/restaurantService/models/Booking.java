@@ -7,6 +7,7 @@ import java.util.Date;
 
 @Entity
 @Table(name="bookings")
+
 public class Booking {
 
     @Id
@@ -15,6 +16,7 @@ public class Booking {
 
     @Column
     private Date date;
+
     @Column
     private Time time;
 

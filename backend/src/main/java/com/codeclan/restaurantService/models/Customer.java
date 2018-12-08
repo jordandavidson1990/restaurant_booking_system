@@ -1,6 +1,6 @@
 package com.codeclan.restaurantService.models;
 
-import org.springframework.data.annotation.Id;
+
 
 import javax.persistence.*;
 import javax.persistence.Table;
@@ -28,16 +28,15 @@ public class Customer{
     @Column(name="contact_number")
     private int contactNumber;
 
-
     @OneToMany(mappedBy = "customer")
-    private List<Booking>bookings;
+    private List<Booking> bookings;
 
     public Customer(String firstName, String lastName, String email, int contactNumber) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
         this.contactNumber = contactNumber;
-        this.bookings = new ArrayList<>();
+        this.bookings = new ArrayList<Booking>();
     }
 
     public Customer() {
