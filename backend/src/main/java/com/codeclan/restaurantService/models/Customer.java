@@ -3,13 +3,14 @@ package com.codeclan.restaurantService.models;
 import org.springframework.data.annotation.Id;
 
 import javax.persistence.*;
+import javax.persistence.Table;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
 @Entity
 @Table(name = "customers")
-public class Customer implements Serializable {
+public class Customer{
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
