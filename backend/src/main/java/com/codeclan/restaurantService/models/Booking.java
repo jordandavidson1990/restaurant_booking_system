@@ -19,13 +19,22 @@ public class Booking {
     private Time time;
 
     @ManyToOne
-    @JoinTable(name="customer_id")
+    @JoinColumn(name="customer_id", nullable=false)
     private Customer customer;
 
-    public Booking(Date date, Time time, Customer customer) {
+    @ManyToOne
+    @JoinColumn(name = "table_id", nullable = false)
+    private RestTable restTable;
+
+    @Column
+    private int numberOfCovers;
+
+    public Booking(Date date, Time time, Customer customer, RestTable restTable, int numberOfCovers) {
         this.date = date;
         this.time = time;
         this.customer = customer;
+        this.restTable = restTable;
+        this.numberOfCovers = numberOfCovers;
     }
 
     public Booking() {
@@ -61,5 +70,21 @@ public class Booking {
 
     public void setCustomer(Customer customer) {
         this.customer = customer;
+    }
+
+    public RestTable getRestTable() {
+        return restTable;
+    }
+
+    public void setRestTable(RestTable restTable) {
+        this.restTable = restTable;
+    }
+
+    public int getNumberOfCovers() {
+        return numberOfCovers;
+    }
+
+    public void setNumberOfCovers(int numberOfCovers) {
+        this.numberOfCovers = numberOfCovers;
     }
 }

@@ -1,6 +1,8 @@
 package com.codeclan.restaurantService.models;
 
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Table(name="tables")
@@ -12,12 +14,17 @@ public class RestTable {
 
     @Column(name="table_number")
     private int tableNumber;
-    @Column
-    private int covers;
 
-    public RestTable(int tableNumber, int covers) {
+    @Column(name = "max_covers")
+    private int maxCovers;
+
+    @OneToMany(mappedBy = "booking")
+    private List<Booking> bookings;
+
+    public RestTable(int tableNumber, int maxCovers) {
         this.tableNumber = tableNumber;
-        this.covers = covers;
+        this.maxCovers = maxCovers;
+        this.bookings = new ArrayList<Booking>();
     }
 
     public RestTable() {
@@ -32,11 +39,23 @@ public class RestTable {
     }
 
     public int getCovers() {
-        return covers;
+        return maxCovers;
     }
 
     public void setCovers(int covers) {
-        this.covers = covers;
+        this.maxCovers = covers;
+    }
+
+    public int getMaxCovers() {
+        return maxCovers;
+    }
+
+    public List<Booking> getBookings() {
+        return bookings;
+    }
+
+    public void setBookings(List<Booking> bookings) {
+        this.bookings = bookings;
     }
 
     public Long getId() {

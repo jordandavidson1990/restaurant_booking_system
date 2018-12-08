@@ -16,10 +16,10 @@ public class Customer{
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column
+    @Column(name = "first_name")
     private String firstName;
 
-    @Column
+    @Column (name = "last_name")
     private String lastName;
 
     @Column
@@ -27,6 +27,7 @@ public class Customer{
 
     @Column(name="contact_number")
     private int contactNumber;
+
 
     @OneToMany(mappedBy = "customer")
     private List<Booking>bookings;
@@ -89,4 +90,6 @@ public class Customer{
     public void setBookings(List<Booking> bookings) {
         this.bookings = bookings;
     }
+
+
 }
