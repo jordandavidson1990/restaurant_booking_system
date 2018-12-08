@@ -1,7 +1,5 @@
 package com.codeclan.restaurantService.models;
 
-import javax.persistence.*;
-import java.sql.Time;
 import java.util.ArrayList;
 
 //@Entity
@@ -17,15 +15,15 @@ public class Restaurant {
 //    @Column
     private String location;
 //    @Column(name = "opening_time")
-    private Time openingTime;
+    private String openingTime;
 //    @Column(name = "closing_time")
-    private Time closingTime;
+    private String closingTime;
     private String closingDate;
     private ArrayList<Booking>bookings;
     private ArrayList<RestTable>restTables;
     private ArrayList<Customer>customers;
 
-    public Restaurant(String name, String location, Time openingTime, Time closingTime, String closingDate) {
+    public Restaurant(String name, String location, String openingTime, String closingTime, String closingDate) {
         this.name = name;
         this.location = location;
         this.openingTime = openingTime;
@@ -44,19 +42,19 @@ public class Restaurant {
         this.name = name;
     }
 
-    public Time getOpeningTime() {
+    public String getOpeningTime() {
         return openingTime;
     }
 
-    public void setOpeningTime(Time openingTime) {
+    public void setOpeningTime(String openingTime) {
         this.openingTime = openingTime;
     }
 
-    public Time getClosingTime() {
+    public String getClosingTime() {
         return closingTime;
     }
 
-    public void setClosingTime(Time closingTime) {
+    public void setClosingTime(String closingTime) {
         this.closingTime = closingTime;
     }
 
@@ -93,4 +91,11 @@ public class Restaurant {
     }
 
 
+    public void addCustomerToRestaurantCustomersList(Customer customer) {
+        this.getCustomers().add(customer);
+    }
+
+    public int getRestCustomerAmount() {
+        return getCustomers().size();
+    }
 }
