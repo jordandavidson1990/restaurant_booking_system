@@ -41,14 +41,10 @@ public class RestaurantServiceApplicationTests {
 	}
 
 
-	@Before
-	public void setUp() throws Exception {
+	@Test
+	public void canAddCustomerToRestaurantCustomersList() {
 		Restaurant restaurant = new Restaurant("78", "Finneston", "12:00:00","23:00:00","Christmas");
 		Customer customer = new Customer("Florence", "Machine", "fm@growlmail.com", 749473829);
-	}
-
-	@Test
-	public void canCreateCustomer() {
 		restaurant.addCustomerToRestaurantCustomersList(customer);
 		assertEquals(1, restaurant.getRestCustomerAmount());
 	}

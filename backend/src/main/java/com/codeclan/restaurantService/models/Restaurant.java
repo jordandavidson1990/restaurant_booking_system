@@ -92,10 +92,10 @@ public class Restaurant {
 
 
     public void addCustomerToRestaurantCustomersList(Customer customer) {
-        this.getCustomers().add(customer);
+        this.customers.add(customer);
     }
 
     public int getRestCustomerAmount() {
-        return getCustomers().size();
+        return customers.size();
     }
 }
