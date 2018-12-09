@@ -37,8 +37,8 @@ public class DataLoader implements ApplicationRunner {
 
     public void run(ApplicationArguments args) {
 
-        DateFormat sfd = new SimpleDateFormat("dd-MM-yy");
-        String bookingDate = "24-07-2018";
+        DateFormat sfd = new SimpleDateFormat("EEE, d MMM yyyy HH:mm:ss Z");
+        String bookingDate = "Wed, 4 Jul 2001 15:08:56 +0100";
         Date date01 = null;
         try {
             date01 = sfd.parse(bookingDate);

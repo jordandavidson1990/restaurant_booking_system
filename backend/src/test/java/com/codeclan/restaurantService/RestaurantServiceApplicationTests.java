@@ -61,14 +61,14 @@ public class RestaurantServiceApplicationTests {
 		// use this an alternative to simpleDateFormat
 		date = new GregorianCalendar(2018, Calendar.OCTOBER, 18).getTime();
 
-//		DateFormat sfd = new SimpleDateFormat("dd-MM-yy");
-//		String bookingDate = "24-07-2018";
-//		Date date = null;
-//		try {
-//			date = sfd.parse(bookingDate);
-//		} catch (ParseException e) {
-//			e.printStackTrace();
-//		}
+		DateFormat sfd = new SimpleDateFormat("dd-MM-yy");
+		String bookingDate = "24-07-2018";
+		Date date = null;
+		try {
+			date = sfd.parse(bookingDate);
+		} catch (ParseException e) {
+			e.printStackTrace();
+		}
 
 		time = new Time(12, 00, 00);
 	}
