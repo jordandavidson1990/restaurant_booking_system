@@ -1,24 +1,25 @@
 package com.codeclan.restaurantService.models;
 
-import org.springframework.data.annotation.Id;
+
 
 import javax.persistence.*;
+import javax.persistence.Table;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
 @Entity
 @Table(name = "customers")
-public class Customer implements Serializable {
+public class Customer implements Serializable{
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column
+    @Column(name = "first_name")
     private String firstName;
 
-    @Column
+    @Column (name = "last_name")
     private String lastName;
 
     @Column
@@ -28,14 +29,15 @@ public class Customer implements Serializable {
     private int contactNumber;
 
     @OneToMany(mappedBy = "customer")
-    private List<Booking>bookings;
+    // do we need a @Cascade here? check ship from week14/day4
+    private List<Booking> bookings;
 
     public Customer(String firstName, String lastName, String email, int contactNumber) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
         this.contactNumber = contactNumber;
-        this.bookings = new ArrayList<>();
+        this.bookings = new ArrayList<Booking>();
     }
 
     public Customer() {
@@ -88,4 +90,10 @@ public class Customer implements Serializable {
     public void setBookings(List<Booking> bookings) {
         this.bookings = bookings;
     }
+
+
+    // the customer can add a booking to own booking list:
+    public void addBooking(Booking booking) {this.bookings.add(booking);}
+
+
 }
