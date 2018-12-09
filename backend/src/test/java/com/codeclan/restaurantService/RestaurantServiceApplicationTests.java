@@ -18,6 +18,7 @@ import java.sql.Time;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 
@@ -48,6 +49,7 @@ public class RestaurantServiceApplicationTests {
 	public void contextLoads() {
 	}
 
+
 //	@Before
 //	public void setUp() {
 //		Restaurant restaurant = new Restaurant("78", "Finneston", "12:00:00","23:00:00","Christmas");
@@ -71,13 +73,14 @@ public class RestaurantServiceApplicationTests {
 //		}
 //
 //		time = new Time(12, 00, 00);
-//	}
+////	}
+
 
 
 	@Test
 	public void customerCanAddBookingToOwnBookingList() {
 
-		Booking booking1 = new Booking(date, time , customer, table, 3);
+		Booking booking1 = new Booking(date, customer, table, 3);
 		bookingRepository.save(booking1);
 
 		customer.addBooking(booking1);
