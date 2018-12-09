@@ -53,8 +53,17 @@ public class DataLoader implements ApplicationRunner {
         Customer customer1 = new Customer("Florence", "Machine", "fm@growlmail.com", 749473829);
         customerRepository.save(customer1);
 
+        Customer customer2 = new Customer("Neil", "D", "fm@growlmail.com", 749473003);
+        customerRepository.save(customer2);
+
+        RestTable table1 = new RestTable(1,3);
+        restTableRepository.save(table1);
+
         RestTable table2 = new RestTable(2, 4);
         restTableRepository.save(table2);
+
+        RestTable table3 = new RestTable(3,6);
+        restTableRepository.save(table3);
 
         Booking booking1 = new Booking(date01, time01 , customer1, table2, 3);
         bookingRepository.save(booking1);

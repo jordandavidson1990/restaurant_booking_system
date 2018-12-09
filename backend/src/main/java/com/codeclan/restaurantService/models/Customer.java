@@ -10,7 +10,7 @@ import java.util.List;
 
 @Entity
 @Table(name = "customers")
-public class Customer{
+public class Customer implements Serializable{
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -29,6 +29,7 @@ public class Customer{
     private int contactNumber;
 
     @OneToMany(mappedBy = "customer")
+    // do we need a @Cascade here? check ship from week14/day4
     private List<Booking> bookings;
 
     public Customer(String firstName, String lastName, String email, int contactNumber) {
@@ -89,6 +90,10 @@ public class Customer{
     public void setBookings(List<Booking> bookings) {
         this.bookings = bookings;
     }
+
+
+    // the customer can add a booking to own booking list:
+    public void addBooking(Booking booking) {this.bookings.add(booking);}
 
 
 }

@@ -38,14 +38,6 @@ public class RestTable {
         this.tableNumber = tableNumber;
     }
 
-    public int getCovers() {
-        return maxCovers;
-    }
-
-    public void setCovers(int covers) {
-        this.maxCovers = covers;
-    }
-
     public int getMaxCovers() {
         return maxCovers;
     }
