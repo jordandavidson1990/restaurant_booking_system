@@ -18,7 +18,9 @@ import java.sql.Time;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Date;
+import java.util.GregorianCalendar;
 
 import static org.junit.Assert.assertEquals;
 
@@ -56,14 +58,17 @@ public class RestaurantServiceApplicationTests {
 		table = new RestTable(1,3);
 		restTableRepository.save(table);
 
-		DateFormat sfd = new SimpleDateFormat("dd-MM-yy");
-		String bookingDate = "24-07-2018";
-		Date date = null;
-		try {
-			date = sfd.parse(bookingDate);
-		} catch (ParseException e) {
-			e.printStackTrace();
-		}
+		// use this an alternative to simpleDateFormat
+		date = new GregorianCalendar(2018, Calendar.OCTOBER, 18).getTime();
+
+//		DateFormat sfd = new SimpleDateFormat("dd-MM-yy");
+//		String bookingDate = "24-07-2018";
+//		Date date = null;
+//		try {
+//			date = sfd.parse(bookingDate);
+//		} catch (ParseException e) {
+//			e.printStackTrace();
+//		}
 
 		time = new Time(12, 00, 00);
 	}
