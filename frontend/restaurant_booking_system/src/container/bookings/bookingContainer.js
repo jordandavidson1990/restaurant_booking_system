@@ -1,26 +1,20 @@
 import React from "react";
 import BookingList from "../../components/bookings/BookingList";
+import Request from "../../helpers/request";
 
 class BookingContainer extends React.Component{
 constructor(props){
   super(props);
   this.state = {
-    bookings:[{
-      id:1,
-      leadCustomer:"Craig Dunlop",
-      guests: 4,
-      time:"17:50",
-      table: 2
-    },
-    {
-      id:2,
-      leadCustomer:"Eilidh MacKenzie",
-      guests: 4,
-      time:"17:50",
-      table: 4
-    },
-  ]
+    bookings:[]
   }
+}
+
+componentDidMount(){
+  const request = new Request();
+  request.get('/api/bookings').then(data => {
+    this.setState({bookings:data._embedded.bookings})
+  })
 }
 
   render(){
