@@ -2,41 +2,98 @@ body{
   background-color: #CBF3F0;
 }
 
-ul{
+.navbar-Sections li{
   list-style-type: none;
   margin:0;
   padding: 0;
   background-color: #FFBF69;
   border: 1px solid #555;
-  /* height:100%;
-  position: fixed;
-  overflow: auto; */
   width:100%;
+  /* display: inline; */
+  justify-content: space-between;
+  overflow: hidden;
+  position:sticky;
+  /* position: fixed; */
+  text-align: center;
 }
-li
-{
+li{
+  list-style-type:none;
+}
+
+
+.single-customer{
+  background-color: #FFBF69;
+  border: 1px solid #555;
+  margin: 10px;
+  width:auto;
+  border-radius: 40px;
+}
+
+.customer-container li{
   display: inline;
   width:10px;
   margin: 10px;
   text-align: center;
-
+}
+ul{
+  margin-top: 20px;
+  padding: 0;
 }
 
+ul a:hover {
+  background-color: #2EC4B6;
+}
 
-/* li:active{
-  display: block;
-  padding:8px;
-  background-color: black;
-} */
+.active {
+  background-color: #4CAF50;
+}
+
+.new-customer{
+  margin-left:  20px;
+  margin-right: 20px;
+  padding:20px;
+  display: grid;
+  /* text-align: center; */
+}
+input{
+  margin: 20px;
+}
+h1{
+  font-family: sans-serif;
+  background-color: #FFBF69;
+  margin-top:10px;
+  display: flex;
+  justify-content: center;
+  background-position: left;
+  border: 2px green solid;
+  margin: 20px;
+  width: auto;
+}
+
 .booking-container{
   margin:20px;
   padding:10px;
   text-align: center;
 }
-/*
-.navLink{
-  justify-content: space-between;
-} */
 .navLink a{
   color:black;
+}
+/*
+.table-item{
+display: table;
+} */
+
+.table-tables{
+  display: inline-flex;
+  /* justify-content: space-around; */
+  margin: 40px;
+  width: auto;
+
+}
+
+div .single-table{
+  border: 2px solid #555;
+  padding:20px;
+  background-color: #FFBF69;
+  text-align: center;
 }
