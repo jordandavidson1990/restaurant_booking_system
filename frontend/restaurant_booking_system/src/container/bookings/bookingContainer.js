@@ -19,10 +19,12 @@ componentDidMount(){
 
   render(){
     return(
+
       <div className = "booking-container">
       <h1> Bookings </h1>
       <BookingList bookings = {this.state.bookings}/>
     </div>
+
     )
   }
 }
