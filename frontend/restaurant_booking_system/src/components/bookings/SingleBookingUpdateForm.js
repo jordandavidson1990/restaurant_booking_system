@@ -7,15 +7,18 @@ const SingleBookingUpdateForm = (props) => {
     event.preventDefault();
     const booking = {
       "id": props.booking.id,
-      "date": event.booking.date,
-      "firstName": event.booking.customer.firstName,
-      "lastName": event.booking.customer.lastName,
-      "numberOfCovers": event.booking.numberOfCovers,
-      "tableNumber": event.booking.restTable.tableNumber
+      "date": event.target.date.value,
+      "firstName": event.target.firstName.value,
+      "lastName": event.target.lastName.value,
+      "numberOfCovers": event.target.numberOfCovers.value,
+      "tableNumber": event.target.restTable.tableNumber.value
     }
     props.handleBookingUpdate(booking)
   }
 
+  // const tableOptions = props.restTables.map((restTable) => {
+  //   return <option key={restTable.id} value={restTable._links.self.href}>{resttable}
+  // })
 
 
   return (
