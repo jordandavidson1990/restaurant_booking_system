@@ -16,6 +16,7 @@ class App extends Component {
           <React.Fragment>
             <NavBar/>
             <Switch>
+              <Route exact path = "/today" component = {BookingContainer}/>
             <Route exact path="/customers" component = {CustomerContainer}/>
             <Route exact path="/bookings" component = {BookingContainer}/>
             <Route exact path="/restTables" component = {TableContainer}/>

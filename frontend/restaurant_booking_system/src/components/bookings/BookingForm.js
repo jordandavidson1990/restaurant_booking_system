@@ -25,6 +25,7 @@ const BookingForm = (props) => {
 
   return(
     <form onSubmit = {handleSubmit}>
+      <label htmlFor="date">Date & Time</label>
       <input type="datetime-local" placeholder = "date" name = "date"/>
       {/* <input type="text" placeholder = "First Name" name = "firstName"/>
       <input type="text" placeholder = "Last Name" name = "lastName"/>
@@ -34,6 +35,7 @@ const BookingForm = (props) => {
         {customerOptions}
       </select>
       <input type="number" placeholder = "No. of Guests" name = "numberOfCovers"/>
+      <label htmlFor="table">Table</label>
       <select name = "table">
         {tableOptions}
       </select>
