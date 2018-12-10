@@ -16,6 +16,11 @@ body{
   /* position: fixed; */
   text-align: center;
 }
+
+p{
+  color: #C1B098;
+  font-family: Impact, Charcoal, sans-serif
+}
 li{
   list-style-type:none;
 }
@@ -84,14 +89,13 @@ display: table;
 } */
 
 .table-tables{
-  display: inline-flex;
+  display: inline;
   /* justify-content: space-around; */
   margin: 40px;
   width: auto;
-
 }
 
-div .single-table{
+div .single-table, .single-booking{
   border: 2px solid #555;
   padding:20px;
   background-color: #FFBF69;
