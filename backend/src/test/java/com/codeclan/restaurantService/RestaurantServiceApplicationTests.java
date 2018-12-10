@@ -54,10 +54,10 @@ public class RestaurantServiceApplicationTests {
 //	public void setUp() {
 //		Restaurant restaurant = new Restaurant("78", "Finneston", "12:00:00","23:00:00","Christmas");
 //
-//		customer = new Customer("Florence", "Machine", "fm@growlmail.com", 749473829);
+//		customer = new Customer("Florence", "Machine", "fm@growlmail.com", "749473829");
 //		customerRepository.save(customer);
 //
-//		customer2 = new Customer("Florence", "Car", "fm@growlmail.com", 749473829);
+//		customer2 = new Customer("Florence", "Car", "fm@growlmail.com", "749473829");
 //		customerRepository.save(customer2);
 //
 //		table = new RestTable(1,3);
