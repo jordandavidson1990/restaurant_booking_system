@@ -5,6 +5,8 @@ import BookingContainer from "./container/bookings/bookingContainer";
 import NavBar from "./NavBar";
 import SingleBookingContainer from "./container/bookings/SingleBookingContainer";
 import BookingFormContainer from "./container/bookings/BookingFormContainer";
+import SingleBookingUpdateContainer from "./container/bookings/SingleBookingUpdateContainer";
+// import SingleBookingUpdateForm from "./"
 import CustomerFormContainer from "./container/customers/CustomerFormContainer";
 import CustomerContainer from "./container/customers/CustomerContainer";
 import TableContainer from "./container/tables/TableContainer";
@@ -25,6 +27,10 @@ class App extends Component {
             <Route exact path="/bookings/:id" render={(props) => {
               const id = props.match.params.id
               return<SingleBookingContainer id={id}/>
+            }}/>
+            <Route exact path="/bookings/update/:id" render={(props) => {
+              const id = props.match.params.id
+              return<SingleBookingUpdateContainer id={id}/>
             }}/>
 
             <Route exact path="/customers/new" component = {CustomerFormContainer}/>
