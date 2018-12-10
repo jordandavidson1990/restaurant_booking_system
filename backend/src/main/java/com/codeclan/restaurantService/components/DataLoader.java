@@ -48,13 +48,13 @@ public class DataLoader implements ApplicationRunner {
 
 //        Restaurant restaurant = new Restaurant("78", "Finneston", "12:00:00","23:00:00","Christmas");
 
-        Customer customer1 = new Customer("Florence", "Machine", "fm@growlmail.com", 749473829);
+        Customer customer1 = new Customer("Florence", "Machine", "fm@growlmail.com", "749473829");
         customerRepository.save(customer1);
 
-        Customer customer2 = new Customer("Neil", "D", "fm@growlmail.com", 749473003);
+        Customer customer2 = new Customer("Neil", "D", "fm@growlmail.com", "749473003");
         customerRepository.save(customer2);
 
-        Customer customer3 = new Customer("Neil", "Another", "fm@growlmail.com", 749473003);
+        Customer customer3 = new Customer("Neil", "Another", "fm@growlmail.com", "749473003");
         customerRepository.save(customer3);
 
         RestTable table1 = new RestTable(1,3);
