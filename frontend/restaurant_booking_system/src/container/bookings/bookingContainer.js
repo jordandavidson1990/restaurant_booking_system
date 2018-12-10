@@ -15,7 +15,13 @@ constructor(props){
 componentDidMount(){
   const request = new Request();
   request.get('/api/bookings').then(data => {
-    this.setState({bookings:data._embedded.bookings})
+    const bookingList = data._embedded.bookings;
+    let sortedBookings = bookingList.sort(function(a,b){
+      const aDate = new Date(a.date);
+      const bDate = new Date(b.date);
+      return aDate-bDate;
+    })
+    this.setState({bookings:sortedBookings})
   })
 }
 
@@ -23,7 +29,12 @@ handleDateChange(date){
   const filteredBookings = this.state.bookings.filter((booking) => {
     return booking.date.includes(date)
   })
-  this.setState({bookings:filteredBookings})
+  let sortedBookings = filteredBookings.sort(function(a,b){
+    const aDate = new Date(a.date);
+    const bDate = new Date(b.date);
+    return aDate-bDate;
+  })
+  this.setState({bookings:sortedBookings})
 }
 
   render(){
