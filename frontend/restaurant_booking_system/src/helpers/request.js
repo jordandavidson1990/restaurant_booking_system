@@ -28,10 +28,7 @@ class Request {
       headers: { 'Content-Type': 'application/json'}
     })
   };
-<<<<<<< HEAD
-=======
-  
->>>>>>> develop
+
 }
 
 export default Request;
