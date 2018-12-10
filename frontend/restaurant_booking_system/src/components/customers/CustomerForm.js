@@ -14,12 +14,13 @@ const CustomerForm = (props) => {
   }
 
   return(
-    <form onSubmit = {handleSubmit}>
+    <form className="new-customer"onSubmit = {handleSubmit}>
       <input type="text" placeholder="first name" name="firstName"/>
       <input type="text" placeholder = "last Name" name = "lastName"/>
       <input type="text" placeholder = "email" name = "email"/>
       <input type="text" placeholder = "contact Number" name = "contactNumber"/>
-      <button type="submit">register</button>
+      <button className="btn" type="submit">register</button>
+
     </form>
   )
 
