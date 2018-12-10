@@ -21,7 +21,7 @@ const UpdateCustomerForm = (props) => {
       <input type="text" placeholder="last name" name="lastName" defaultValue={props.customer.lastName}/>
       <input type="text" placeholder="email" name="email" defaultValue={props.customer.email}/>
       <input type="text" placeholder="contact number" name="contactNumber" defaultValue={props.customer.contactNumber}/>
-      <button className="btn"type="submit">save</button>
+      <button className="btn btn-info"type="submit">save</button>
     </form>
   )
 }
