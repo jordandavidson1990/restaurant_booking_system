@@ -34,14 +34,17 @@ li{
   background-color: #FFBF69;
   border: 2px solid #555;
   margin: 10px;
-  width:auto;
+  width:100%;
   /* border-radius: 40px; */
-  padding:5px;
+  padding:0px;
   display: flex;
   flex-wrap: wrap;
 
   /* align-items: center; */
-  padding: 5px;
+  padding: 0px;
+}
+a.single-customer-link{
+  width:100%;
 }
 
 
@@ -79,8 +82,8 @@ h1{
   justify-content: center;
   /* background-position: left; */
   border: 2px green solid;
-  margin: 20px;
-  width: auto;
+  margin: auto;
+  width: 80%;
 }
 
 .booking-container{
@@ -126,7 +129,7 @@ label{
   background-color:
 }
 
-.single-container-link{
+.single-containe{
   height: 40px;
   /* padding-bottom: 100%; */
   display: block;
@@ -166,6 +169,10 @@ label{
   text-align: center;
   flex-basis: 50%;
 }
+div.customer-container{
+  margin:auto;
+  width: 80%;
+}
 a{
   color: black;
 }
@@ -175,4 +182,15 @@ a{
 } */
 form.container{
   margin:auto;
+}
+
+div.component{
+display: grid;
+justify-content: center;
+text-align: center;
+border: 2px solid;
+width: 50%;
+margin: auto;
+padding: 20px;
+background-color: #ffbf69;
 }

@@ -38,7 +38,7 @@ const BookingForm = (props) => {
 
         {tableOptions}
       </select>
-      <button className="btn" type = "submit">Save Booking</button>
+      <button className="btn btn-info" type = "submit">Save Booking</button>
 
     </form>
   )

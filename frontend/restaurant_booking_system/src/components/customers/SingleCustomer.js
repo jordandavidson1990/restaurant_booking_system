@@ -21,10 +21,11 @@ const SingleCustomer = (props) => {
     <div className="component">
       <p>Customer: {props.customer.firstName} {props.customer.lastName}</p>
       <p> show list of bookings here </p>
-      <button onClick={onDelete}>delete customer</button>
+
       <Link to={'/customers/update/' + props.customer.id}>
-        <button>update customer</button>
+        <button className="btn m-2 btn-info">update customer</button>
       </Link>
+      <button id="delete-button"className="btn btn-danger btn-sm"onClick={onDelete}>delete customer</button>
     </div>
   )
 
