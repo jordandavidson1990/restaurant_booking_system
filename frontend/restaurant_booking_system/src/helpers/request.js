@@ -18,7 +18,7 @@ class Request {
       method: 'POST',
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify(payload)
-    })
+    });
   }
 
   put(url, payload) {
@@ -28,6 +28,10 @@ class Request {
       headers: { 'Content-Type': 'application/json'}
     })
   };
+<<<<<<< HEAD
+=======
+  
+>>>>>>> develop
 }
 
 export default Request;
