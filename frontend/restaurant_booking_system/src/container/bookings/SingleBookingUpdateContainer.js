@@ -68,11 +68,12 @@ class SingleBookingUpdateContainer extends React.Component{
   render(){
     return(
       <SingleBookingUpdateForm
+      booking={this.state.booking}
       customers = {this.state.customers}
       restTables = {this.state.restTables}
       // bookings = {this.state.bookings}
       handleBookingUpdate = {this.handleBookingUpdate}
-      booking={this.state.booking}
+
       />
     )
   }

@@ -20,6 +20,14 @@ class Request {
       body: JSON.stringify(payload)
     })
   }
+
+  put(url, payload) {
+    return fetch(url, {
+      method: 'PUT',
+      body: JSON.stringify(payload),
+      headers: { 'Content-Type': 'application/json'}
+    })
+  };
 }
 
 export default Request;
