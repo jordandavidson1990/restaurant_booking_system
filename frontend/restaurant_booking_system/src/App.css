@@ -22,8 +22,8 @@ body{
 }
 
 /* p{
-  color: #C1B098;
-  font-family: Impact, Charcoal, sans-serif
+color: #C1B098;
+font-family: Impact, Charcoal, sans-serif
 } */
 li{
   list-style-type:none;
@@ -35,16 +35,16 @@ li{
   border: 2px solid #555;
   margin: 10px;
   width:auto;
-  border-radius: 40px;
+  /* border-radius: 40px; */
   padding:5px;
+  display: flex;
+  flex-wrap: wrap;
+
+  /* align-items: center; */
+  padding: 5px;
 }
 
-.customer-container li{
-  display: inline;
-  width:10px;
-  margin: 10px;
-  text-align: center;
-}
+
 ul{
   margin-top: 20px;
   padding: 0;
@@ -59,7 +59,7 @@ ul a:hover {
   background-color: #4CAF50;
 }
 h1, h2, p{
-   font-family:'Lobster Two', Helvetica, sans-serif;
+  font-family:'Lobster Two', Helvetica, sans-serif;
 }
 
 .new-customer, .container{
@@ -103,16 +103,16 @@ display: table;
   width: auto;
 }
 
-div .single-table, .single-booking-container{
+div .single-table, .single-booking-container, label{
   border: 2px solid #555;
   padding:20px;
   background-color: #FFBF69;
   text-align: center;
 }
 .navLink a {
-    color: black;
-    display: block;
-    text-decoration: none;
+  color: black;
+  display: block;
+  text-decoration: none;
 }
 .restTable-container ul{
   display: flex;
@@ -123,4 +123,56 @@ div .single-table, .single-booking-container{
 label{
   text-align: center;
   font-family: 'Lobster Two', Helvetica, sans-serif;
+  background-color:
+}
+
+.single-container-link{
+  height: 40px;
+  /* padding-bottom: 100%; */
+  display: block;
+  width: 40px;
+  /* text-align: center; */
+  border: 1px;
+  border:2px solid black;
+  border-radius: 50%;
+}
+.single-container{
+  background-color: #FFBF69;
+  border: 2px solid #555;
+  /* margin: 10px; */
+  width: auto;
+  /* border-radius: 40px; */
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  /* height: 0; */
+}
+/* .customer-container li{
+  /* display: inline; */
+  /* max-width: 50%;
+  flex-basis: 50%;
+} */
+.customer-container ul{
+  display: flex;
+  flex-wrap: wrap;
+  flex-basis: 50%;
+  /* max-width: 50%; */
+  /* flex-direction: column; */
+}
+.customer-container li{
+  display: inline;
+  width:10px;
+  /* margin: 10px; */
+  text-align: center;
+  flex-basis: 50%;
+}
+a{
+  color: black;
+}
+
+/* form.container{
+  margin:0;
+} */
+form.container{
+  margin:auto;
 }

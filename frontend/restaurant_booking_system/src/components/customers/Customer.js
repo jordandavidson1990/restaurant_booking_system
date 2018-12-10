@@ -9,10 +9,12 @@ console.log(bookingArray);
 const id = props.customer.id
   return(
     <div className = "single-customer">
-      <Link to={'/customers/' +id} className="single-customer">{id}</Link>
+      <Link to={'/customers/' +id} className="single-customer-link">{id}</Link>
+      <div className="customer-inner">
       <p> Name: {props.customer.firstName} {props.customer.lastName} </p>
       <p> Contacts: {props.customer.contactNumber}, email:{props.customer.email}</p>
       <p> Number of bookings: {props.customer.bookings.length} </p>
+      </div>
     </div>
   )
 }
