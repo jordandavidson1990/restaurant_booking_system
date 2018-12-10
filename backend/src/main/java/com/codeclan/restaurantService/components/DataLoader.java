@@ -37,8 +37,8 @@ public class DataLoader implements ApplicationRunner {
 
     public void run(ApplicationArguments args) {
 
-        DateFormat sfd = new SimpleDateFormat("dd-MM-yy");
-        String bookingDate = "24-07-2018";
+        DateFormat sfd = new SimpleDateFormat("EEE, d MMM yyyy HH:mm:ss Z");
+        String bookingDate = "Wed, 4 Jul 2001 15:08:56 +0100";
         Date date01 = null;
         try {
             date01 = sfd.parse(bookingDate);
@@ -46,15 +46,16 @@ public class DataLoader implements ApplicationRunner {
             e.printStackTrace();
         }
 
-        Time time01 = new Time(12, 00, 00);
-
-        Restaurant restaurant = new Restaurant("78", "Finneston", "12:00:00","23:00:00","Christmas");
+//        Restaurant restaurant = new Restaurant("78", "Finneston", "12:00:00","23:00:00","Christmas");
 
         Customer customer1 = new Customer("Florence", "Machine", "fm@growlmail.com", 749473829);
         customerRepository.save(customer1);
 
         Customer customer2 = new Customer("Neil", "D", "fm@growlmail.com", 749473003);
         customerRepository.save(customer2);
+
+        Customer customer3 = new Customer("Neil", "Another", "fm@growlmail.com", 749473003);
+        customerRepository.save(customer3);
 
         RestTable table1 = new RestTable(1,3);
         restTableRepository.save(table1);
@@ -65,7 +66,7 @@ public class DataLoader implements ApplicationRunner {
         RestTable table3 = new RestTable(3,6);
         restTableRepository.save(table3);
 
-        Booking booking1 = new Booking(date01, time01 , customer1, table2, 3);
+        Booking booking1 = new Booking(date01 , customer1, table2, 3);
         bookingRepository.save(booking1);
 
 

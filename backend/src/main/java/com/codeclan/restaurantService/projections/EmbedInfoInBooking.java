@@ -12,7 +12,6 @@ import java.util.Date;
 public interface EmbedInfoInBooking {
     Long getId();
     Date getDate();
-    Time getTime();
     Customer getCustomer();
     RestTable getRestTable();
     int getNumberOfCovers();
