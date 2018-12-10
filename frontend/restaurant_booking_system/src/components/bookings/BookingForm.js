@@ -25,37 +25,33 @@ const BookingForm = (props) => {
   })
 
   return(
-<<<<<<< HEAD
+// <<<<<<< HEAD
+//     <form className="container" onSubmit = {handleSubmit}>
+//
+//     <div className="row">
+//       <input className="m-4 border rounded"type="date" placeholder = "date" name = "date"/>
+//       <div className="container">
+//       <input className="m-2 border rounded"type="text" placeholder = "First Name" name = "firstName"/>
+//       <input className="m-2 border rounded" type="text" placeholder = "Last Name" name = "lastName"/>
+//       <input className="m-2 border rounded" type="text" placeholder = "Email" name = "email"/>
+//       <input className="m-2 border rounded" type="number" placeholder = "Contact Number" name = "contactNumber"/>
+//       <input className="m-2 border rounded" type="number" placeholder = "No. of Guests" name = "numberOfCovers"/>
+//
+//       <button className="btn btn-outline-secondary m-2"type = "submit">Save Booking</button>
+//       </div>
+//       </div>
+// =======
     <form className="container" onSubmit = {handleSubmit}>
-
-    <div className="row">
-      <input className="m-4 border rounded"type="date" placeholder = "date" name = "date"/>
-      <div className="container">
-      <input className="m-2 border rounded"type="text" placeholder = "First Name" name = "firstName"/>
-      <input className="m-2 border rounded" type="text" placeholder = "Last Name" name = "lastName"/>
-      <input className="m-2 border rounded" type="text" placeholder = "Email" name = "email"/>
-      <input className="m-2 border rounded" type="number" placeholder = "Contact Number" name = "contactNumber"/>
-      <input className="m-2 border rounded" type="number" placeholder = "No. of Guests" name = "numberOfCovers"/>
-
-      <button className="btn btn-outline-secondary m-2"type = "submit">Save Booking</button>
-      </div>
-      </div>
-=======
-    <form onSubmit = {handleSubmit}>
-      <input type="datetime-local" placeholder = "date" name = "date"/>
-      {/* <input type="text" placeholder = "First Name" name = "firstName"/>
-      <input type="text" placeholder = "Last Name" name = "lastName"/>
-      <input type="text" placeholder = "Email" name = "email"/>
-      <input type="number" placeholder = "Contact Number" name = "contactNumber"/> */}
+      <input className="m-4 border rounded" type="datetime-local" placeholder = "date" name = "date"/>
       <select name = "customer">
         {customerOptions}
       </select>
-      <input type="number" placeholder = "No. of Guests" name = "numberOfCovers"/>
-      <select name = "table">
+      <input className="m-4 border rounded" type="number" placeholder = "No. of Guests" name = "numberOfCovers"/>
+      <select className="m-4 border rounded" name = "table">
         {tableOptions}
       </select>
       <button type = "submit">Save Booking</button>
->>>>>>> develop
+
     </form>
   )
 }
