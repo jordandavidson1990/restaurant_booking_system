@@ -2,6 +2,9 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const Customer = (props) => {
+const bookingArray = props.customer.bookings;
+const visits = bookingArray.length
+console.log(bookingArray);
 
 const id = props.customer.id
   return(

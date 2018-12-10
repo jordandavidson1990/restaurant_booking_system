@@ -13,7 +13,16 @@ class CustomerContainer extends React.Component{
   componentDidMount(){
     const request = new Request();
     request.get('api/customers').then(data => {
-      this.setState({customers:data._embedded.customers})
+      const customerList = data._embedded.customers;
+
+      let sortedCustomers = customerList.sort(function(a,b){
+        const aVisits = a.bookings.length;
+        const bVisits = b.bookings.length;
+
+        return bVisits-aVisits;
+      })
+
+      this.setState({customers:sortedCustomers})
     })
   }
 
