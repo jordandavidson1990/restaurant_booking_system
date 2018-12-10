@@ -12,6 +12,10 @@ class SingleBookingUpdateContainer extends React.Component{
       tables:[],
       booking: null
     }
+    this.handleBookingUpdate = this.handleBookingUpdate.bind(this)
+    this.getBookings = this.getBookings.bind(this)
+    this.getCustomers = this.getCustomers.bind(this)
+    this.getRestTables = this.getRestTables.bind(this)
   }
 
   componentDidMount(){
@@ -53,9 +57,10 @@ class SingleBookingUpdateContainer extends React.Component{
 
   render(){
     return(
-      <SingleBookingUpdateForm 
+      <SingleBookingUpdateForm
       customers = {this.state.customers}
       restTables = {this.state.restTables}
+      bookings = {this.state.bookings}
       handleBookingUpdate = {this.handleBookingUpdate}
       />
     )
