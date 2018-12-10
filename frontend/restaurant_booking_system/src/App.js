@@ -3,6 +3,7 @@ import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import './App.css';
 import BookingContainer from "./container/bookings/bookingContainer";
 import NavBar from "./NavBar";
+import SingleBookingContainer from "./container/bookings/SingleBookingContainer";
 import BookingFormContainer from "./container/bookings/BookingFormContainer";
 import CustomerContainer from "./container/customers/CustomerContainer";
 import TableContainer from "./container/tables/TableContainer";
@@ -20,6 +21,10 @@ class App extends Component {
             <Route exact path="/bookings" component = {BookingContainer}/>
             <Route exact path="/restTables" component = {TableContainer}/>
             <Route exact path="/bookings/new" component = {BookingFormContainer}/>
+            <Route exact path="/bookings/:id" render={(props) => {
+              const id = props.match.params.id
+              return<SingleBookingContainer id={id}/>
+            }}/>
           </Switch>
           </React.Fragment>
         </Router>
