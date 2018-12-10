@@ -25,6 +25,7 @@ const BookingForm = (props) => {
   })
 
   return(
+<<<<<<< HEAD
 // <<<<<<< HEAD
 //     <form className="container" onSubmit = {handleSubmit}>
 //
@@ -48,6 +49,21 @@ const BookingForm = (props) => {
       </select>
       <input className="m-4 border rounded" type="number" placeholder = "No. of Guests" name = "numberOfCovers"/>
       <select className="m-4 border rounded" name = "table">
+=======
+    <form onSubmit = {handleSubmit}>
+      <label htmlFor="date">Date & Time</label>
+      <input type="datetime-local" placeholder = "date" name = "date"/>
+      {/* <input type="text" placeholder = "First Name" name = "firstName"/>
+      <input type="text" placeholder = "Last Name" name = "lastName"/>
+      <input type="text" placeholder = "Email" name = "email"/>
+      <input type="text" placeholder = "Contact Number" name = "contactNumber"/> */}
+      <select name = "customer">
+        {customerOptions}
+      </select>
+      <input type="number" placeholder = "No. of Guests" name = "numberOfCovers"/>
+      <label htmlFor="table">Table</label>
+      <select name = "table">
+>>>>>>> develop
         {tableOptions}
       </select>
       <button type = "submit">Save Booking</button>

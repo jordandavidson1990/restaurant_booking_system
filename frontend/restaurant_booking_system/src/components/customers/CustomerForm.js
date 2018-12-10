@@ -18,8 +18,9 @@ const CustomerForm = (props) => {
       <input type="text" placeholder="first name" name="firstName"/>
       <input type="text" placeholder = "last Name" name = "lastName"/>
       <input type="text" placeholder = "email" name = "email"/>
-      <input type="number" placeholder = "contact Number" name = "contactNumber"/>
+      <input type="text" placeholder = "contact Number" name = "contactNumber"/>
       <button className="btn" type="submit">register</button>
+
     </form>
   )
 

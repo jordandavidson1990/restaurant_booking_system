@@ -26,13 +26,13 @@ public class Customer implements Serializable{
     private String email;
 
     @Column(name="contact_number")
-    private int contactNumber;
+    private String contactNumber;
 
     @OneToMany(mappedBy = "customer")
     // do we need a @Cascade here? check ship from week14/day4
     private List<Booking> bookings;
 
-    public Customer(String firstName, String lastName, String email, int contactNumber) {
+    public Customer(String firstName, String lastName, String email, String contactNumber) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
@@ -75,11 +75,11 @@ public class Customer implements Serializable{
         this.email = email;
     }
 
-    public int getContactNumber() {
+    public String getContactNumber() {
         return contactNumber;
     }
 
-    public void setContactNumber(int contactNumber) {
+    public void setContactNumber(String contactNumber) {
         this.contactNumber = contactNumber;
     }
 

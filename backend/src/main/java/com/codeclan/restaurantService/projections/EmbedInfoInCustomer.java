@@ -12,7 +12,7 @@ public interface EmbedInfoInCustomer {
     String getFirstName();
     String getLastName();
     String getEmail();
-    int getContactNumber();
+    String getContactNumber();
     List<Booking> getBookings();
 
 }
