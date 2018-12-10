@@ -29,7 +29,7 @@ const BookingForm = (props) => {
       {/* <input type="text" placeholder = "First Name" name = "firstName"/>
       <input type="text" placeholder = "Last Name" name = "lastName"/>
       <input type="text" placeholder = "Email" name = "email"/>
-      <input type="number" placeholder = "Contact Number" name = "contactNumber"/> */}
+      <input type="text" placeholder = "Contact Number" name = "contactNumber"/> */}
       <select name = "customer">
         {customerOptions}
       </select>
