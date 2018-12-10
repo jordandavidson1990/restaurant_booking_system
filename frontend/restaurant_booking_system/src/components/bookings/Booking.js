@@ -9,7 +9,7 @@ const dateSorted = date.slice(0,10)
 const time = date.slice(11, 16)
 const id = props.booking.id
   return(
-    <div className = "single-booking">
+    <div className = "single-booking-container">
     <Link to={'/bookings/' +id}
     className="single-booking">{dateSorted} {time}
     </Link>

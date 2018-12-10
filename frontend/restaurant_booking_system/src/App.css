@@ -1,5 +1,7 @@
 body{
   background-color: #CBF3F0;
+  font-family:'Lobster Two', Helvetica, sans-serif;
+  color: black;
 }
 
 .navbar-Sections li{
@@ -13,14 +15,16 @@ body{
   justify-content: space-between;
   overflow: hidden;
   position:sticky;
-  /* position: fixed; */
   text-align: center;
 }
+.navbar-Sections{
+  display: flex;
+}
 
-p{
+/* p{
   color: #C1B098;
   font-family: Impact, Charcoal, sans-serif
-}
+} */
 li{
   list-style-type:none;
 }
@@ -28,10 +32,11 @@ li{
 
 .single-customer{
   background-color: #FFBF69;
-  border: 1px solid #555;
+  border: 2px solid #555;
   margin: 10px;
   width:auto;
   border-radius: 40px;
+  padding:5px;
 }
 
 .customer-container li{
@@ -46,14 +51,18 @@ ul{
 }
 
 ul a:hover {
-  background-color: #2EC4B6;
+  background-color: #cbf3f0;
+  text-decoration: none;
 }
 
 .active {
   background-color: #4CAF50;
 }
+h1, h2, p{
+   font-family:'Lobster Two', Helvetica, sans-serif;
+}
 
-.new-customer{
+.new-customer, .container{
   margin-left:  20px;
   margin-right: 20px;
   padding:20px;
@@ -64,12 +73,11 @@ input{
   margin: 20px;
 }
 h1{
-  font-family: sans-serif;
   background-color: #FFBF69;
   margin-top:10px;
   display: flex;
   justify-content: center;
-  background-position: left;
+  /* background-position: left; */
   border: 2px green solid;
   margin: 20px;
   width: auto;
@@ -95,9 +103,24 @@ display: table;
   width: auto;
 }
 
-div .single-table, .single-booking{
+div .single-table, .single-booking-container{
   border: 2px solid #555;
   padding:20px;
   background-color: #FFBF69;
   text-align: center;
+}
+.navLink a {
+    color: black;
+    display: block;
+    text-decoration: none;
+}
+.restTable-container ul{
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+}
+
+label{
+  text-align: center;
+  font-family: 'Lobster Two', Helvetica, sans-serif;
 }

@@ -26,7 +26,7 @@ const SingleBooking = (props) => {
     <p>Customer: {props.booking.customer.firstName} {props.booking.customer.lastName}</p>
     <p>Number of Guests: {props.booking.numberOfCovers}</p>
     <p> Table: {props.booking.restTable.tableNumber}</p>
-    <button onClick={onDelete}>Delete Booking</button>
+    <button className="btn"onClick={onDelete}>Delete Booking</button>
     </div>
   )
 }
