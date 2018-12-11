@@ -51,7 +51,7 @@ console.log(props.customer.bookings);
         return(
           <li key= {booking.id} className = "customer-booking">
           <div>
-          <div>
+          <div className="single-customer-booking-display">
               {booking.id}:
               </div> {booking.date.slice(0,10)} at {booking.date.slice(14,19)}
               <div>for {booking.numberOfCovers} people,</div> receipt £{booking.receipt}
