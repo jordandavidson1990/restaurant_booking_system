@@ -12,7 +12,7 @@ import CustomerContainer from "./container/customers/CustomerContainer";
 import TableContainer from "./container/tables/TableContainer";
 import SingleCustomerContainer from "./container/customers/SingleCustomerContainer";
 import UpdateCustomerFormContainer from "./container/customers/UpdateCustomerFormContainer";
-
+import TableFormContainer from "./container/tables/TableFormContainer";
 
 class App extends Component {
   render() {
@@ -44,6 +44,8 @@ class App extends Component {
               const id = props.match.params.id
               return <UpdateCustomerFormContainer id={id} />
             }} />
+            <Route exact path="/restTables/new" component = {TableFormContainer}/>
+
 
 
 

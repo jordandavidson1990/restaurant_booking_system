@@ -11,9 +11,12 @@ const Customer = (props) => {
   function totalSpend(){
     let totalSpend;
     if(bookingArray.length > 0){
-    totalSpend = bookingArray.map((booking) => {
-      return booking.receipt;
-    }).reduce(reducer);
+
+    const spending = bookingArray.map((booking) => {
+      return parseInt(booking.receipt);
+    })
+    console.log(bookingArray);
+    totalSpend = spending.reduce(reducer)
   } else{
     totalSpend = 0;
   }
