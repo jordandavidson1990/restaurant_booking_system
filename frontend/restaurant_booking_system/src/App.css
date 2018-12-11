@@ -215,3 +215,8 @@ form{
   display: flex;
   justify-content: center;
 }
+a.new-table{
+  display:flex;
+  justify-content: center;
+  text-decoration: none;
+}

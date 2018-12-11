@@ -11,8 +11,8 @@ const id = props.booking.id
   return(
     <div className = "single-booking-container">
     <Link to={'/bookings/' +id}
-    className="single-booking">DETAILS
-    </Link>
+    className="single-booking">
+
     <div className="booking-inner">
       <p> Date : {dateSorted}</p>
       <p> Time : {time}</p>
@@ -22,6 +22,7 @@ const id = props.booking.id
       <p>Number of Guests: {props.booking.numberOfCovers}</p>
       <p> Table: {props.booking.restTable.tableNumber}</p>
     </div>
+    </Link>
     </div>
   )
 }
