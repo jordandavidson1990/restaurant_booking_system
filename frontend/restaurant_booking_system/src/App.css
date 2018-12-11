@@ -1,32 +1,196 @@
-.App {
+body{
+  background-color: #CBF3F0;
+  font-family:'Lobster Two', Helvetica, sans-serif;
+  color: black;
+}
+
+.navbar-Sections li{
+  list-style-type: none;
+  margin:0;
+  padding: 0;
+  background-color: #FFBF69;
+  border: 1px solid #555;
+  width:100%;
+  /* display: inline; */
+  justify-content: space-between;
+  overflow: hidden;
+  position:sticky;
   text-align: center;
 }
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.navbar-Sections{
   display: flex;
-  flex-direction: column;
-  align-items: center;
+}
+
+/* p{
+color: #C1B098;
+font-family: Impact, Charcoal, sans-serif
+} */
+li{
+  list-style-type:none;
+}
+
+
+.single-customer{
+  background-color: #FFBF69;
+  border: 2px solid #555;
+  margin: 10px;
+  width:100%;
+  /* border-radius: 40px; */
+  padding:0px;
+  display: flex;
+  flex-wrap: wrap;
+
+  /* align-items: center; */
+  padding: 0px;
+}
+a.single-customer-link{
+  width:100%;
+}
+
+
+ul{
+  margin-top: 20px;
+  padding: 0;
+}
+
+ul a:hover {
+  background-color: #cbf3f0;
+  text-decoration: none;
+}
+
+.active {
+  background-color: #4CAF50;
+}
+h1, h2, p{
+  font-family:'Lobster Two', Helvetica, sans-serif;
+}
+
+.new-customer, .container{
+  margin-left:  20px;
+  margin-right: 20px;
+  padding:20px;
+  display: grid;
+  /* text-align: center; */
+}
+input{
+  margin: 20px;
+}
+h1{
+  background-color: #FFBF69;
+  margin-top:10px;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  /* background-position: left; */
+  border: 2px green solid;
+  margin: auto;
+  width: 80%;
 }
 
-.App-link {
-  color: #61dafb;
+.booking-container{
+  margin:20px;
+  padding:10px;
+  text-align: center;
+}
+.navLink a{
+  color:black;
+}
+/*
+.table-item{
+display: table;
+} */
+
+.table-tables{
+  display: inline;
+  /* justify-content: space-around; */
+  margin: 40px;
+  width: auto;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+div .single-table, .single-booking-container, label{
+  border: 2px solid #555;
+  padding:20px;
+  background-color: #FFBF69;
+  text-align: center;
+}
+.navLink a {
+  color: black;
+  display: block;
+  text-decoration: none;
+}
+.restTable-container ul{
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+}
+
+label{
+  text-align: center;
+  font-family: 'Lobster Two', Helvetica, sans-serif;
+  background-color:
+}
+
+.single-containe{
+  height: 40px;
+  /* padding-bottom: 100%; */
+  display: block;
+  width: 40px;
+  /* text-align: center; */
+  border: 1px;
+  border:2px solid black;
+  border-radius: 50%;
+}
+.single-container{
+  background-color: #FFBF69;
+  border: 2px solid #555;
+  /* margin: 10px; */
+  width: auto;
+  /* border-radius: 40px; */
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  /* height: 0; */
+}
+/* .customer-container li{
+  /* display: inline; */
+  /* max-width: 50%;
+  flex-basis: 50%;
+} */
+.customer-container ul{
+  display: flex;
+  flex-wrap: wrap;
+  flex-basis: 50%;
+  /* max-width: 50%; */
+  /* flex-direction: column; */
+}
+.customer-container li{
+  display: inline;
+  width:10px;
+  /* margin: 10px; */
+  text-align: center;
+  flex-basis: 50%;
+}
+div.customer-container{
+  margin:auto;
+  width: 80%;
+}
+a{
+  color: black;
+}
+
+/* form.container{
+  margin:0;
+} */
+form.container{
+  margin:auto;
+}
+
+div.component{
+display: grid;
+justify-content: center;
+text-align: center;
+border: 2px solid;
+width: 50%;
+margin: auto;
+padding: 20px;
+background-color: #ffbf69;
 }

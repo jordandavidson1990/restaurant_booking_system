@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Customer = (props) => {
   const bookingArray = props.customer.bookings;
@@ -24,15 +25,19 @@ const Customer = (props) => {
 
 console.log(totalSpend);
 
-console.log(visits);
-return(
-  <div className = "single-customer">
-    <p> Name: {props.customer.firstName} {props.customer.lastName}: </p>
-    <p> Contact number: {props.customer.contactNumber}, email:{props.customer.email}</p>
-    <p> Number of Bookings: {visits}</p>
-    <p> Total Spent: £{totalSpend()}</p>
-  </div>
-)
+const id = props.customer.id
+  return(
+    <div className = "single-customer">
+      <Link to={'/customers/' +id} className="single-customer-link">{id}
+      <div className="customer-inner">
+      <p> Name: {props.customer.firstName} {props.customer.lastName} </p>
+      <p> Contacts: {props.customer.contactNumber}, email:{props.customer.email}</p>
+      <p> Number of bookings: {props.customer.bookings.length} </p>
+      <p> Total Spent: £{totalSpend()}</p>
+      </div>
+      </Link>
+    </div>
+  )
 }
 
 export default Customer;

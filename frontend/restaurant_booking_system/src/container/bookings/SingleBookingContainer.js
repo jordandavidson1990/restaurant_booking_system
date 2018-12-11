@@ -32,5 +32,21 @@ class SingleBookingContainer extends Component {
       <SingleBooking booking={this.state.booking} handleDelete={this.handleDelete}/>
     )
   }
+
+  handleOnClick(id){
+    const url = "/api/bookings/" + id;
+    let request = new Request()
+    request.get(url).then(() => {
+      window.location = "/bookings"
+    })
+  }
+
+
+  render(){
+    return(
+      <SingleBooking booking={this.state.booking} handleOnClick={this.handleOnClick}/>
+    )
+  }
+
 }
 export default SingleBookingContainer;

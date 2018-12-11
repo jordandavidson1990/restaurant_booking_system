@@ -1,4 +1,5 @@
 import React from "react";
+// import 'bootstrap/dist/css/bootstrap.min.css';
 
 const BookingForm = (props) => {
 
@@ -24,22 +25,21 @@ const BookingForm = (props) => {
   })
 
   return(
-    <form onSubmit = {handleSubmit}>
+
+    <form className="container" onSubmit = {handleSubmit}>
       <label htmlFor="date">Date & Time</label>
-      <input type="datetime-local" placeholder = "date" name = "date"/>
-      {/* <input type="text" placeholder = "First Name" name = "firstName"/>
-      <input type="text" placeholder = "Last Name" name = "lastName"/>
-      <input type="text" placeholder = "Email" name = "email"/>
-      <input type="text" placeholder = "Contact Number" name = "contactNumber"/> */}
-      <select name = "customer">
+      <input className="m-4 border rounded" type="datetime-local" placeholder = "date" name = "date"/>
+      <select className="m-4 border rounded" name = "customer">
         {customerOptions}
       </select>
-      <input type="number" placeholder = "No. of Guests" name = "numberOfCovers"/>
+      <input className="m-4 border rounded" type="number" placeholder = "No. of Guests" name = "numberOfCovers"/>
       <label htmlFor="table">Table</label>
-      <select name = "table">
+      <select className="m-4 border rounded" name = "table">
+
         {tableOptions}
       </select>
-      <button type = "submit">Save Booking</button>
+      <button className="btn btn-info" type = "submit">Save Booking</button>
+
     </form>
   )
 }

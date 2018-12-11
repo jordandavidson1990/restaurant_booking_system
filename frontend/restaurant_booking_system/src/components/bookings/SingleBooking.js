@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom"
 
 const SingleBooking = (props) => {
 
@@ -26,7 +27,12 @@ const SingleBooking = (props) => {
     <p>Customer: {props.booking.customer.firstName} {props.booking.customer.lastName}</p>
     <p>Number of Guests: {props.booking.numberOfCovers}</p>
     <p> Table: {props.booking.restTable.tableNumber}</p>
+
     <button onClick={onDelete}>Delete Booking</button>
+    <Link to={'/bookings/update/' +id}
+    className="single-booking-update"><button>Update</button>
+    </Link>
+    <button className="btn"onClick={onDelete}>Delete Booking</button>
     </div>
   )
 }
