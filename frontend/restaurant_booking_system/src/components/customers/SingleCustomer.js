@@ -11,7 +11,7 @@ const SingleCustomer = (props) => {
   function onDelete() {
     props.handleDelete(props.customer.id)
   }
-const bookings = props.customer.bookings.map((booking) => {
+const bookings = props.customer._embedded.bookings.map((booking) => {
   const date = booking.date.slice(0,10);
   const time = booking.date.slice(11,16);
   return(
@@ -35,10 +35,13 @@ console.log(props.customer.bookings);
   const email = props.customer.email;
   const contactNumber = props.customer.contactNumber;
 
-  const booking_dates = props.customer.bookings.map((booking) => {
+// /api/customers/1/bookings
+
+  const booking_dates = props.customer._embedded.bookings.map((booking) => {
     return(
       <li key= {booking.id} className = "customer-booking">
-          {booking.date.slice(0,10)} at {booking.date.slice(14,19)} for {booking.numberOfCovers} people
+          {booking.id}: {booking.date.slice(0,10)} at {booking.date.slice(14,19)} for {booking.numberOfCovers} people
+           <Link to={'/bookings/update/' + booking.id}><button> update </button></Link>
       </li>
     )
   })

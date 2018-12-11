@@ -6,7 +6,7 @@ const CustomerList = (props) => {
     const customers = props.customers.map((customer) => {
       return(
         <li key= {customer.id} className = "customer-item">
-          <Customer customer = {customer}/>
+          <Customer customer = {customer} />
         </li>
       )
     })
