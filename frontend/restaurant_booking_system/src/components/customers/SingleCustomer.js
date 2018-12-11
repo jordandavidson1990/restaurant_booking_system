@@ -42,14 +42,22 @@ console.log(props.customer.bookings);
 
 // /api/customers/1/bookings
 
-  const booking_dates = props.customer._embedded.bookings.map((booking) => {
-    return(
-      <li key= {booking.id} className = "customer-booking">
-          {booking.id}: {booking.date.slice(0,10)} at {booking.date.slice(14,19)} for {booking.numberOfCovers} people, receipt:{booking.receipt}
-           <Link to={'/bookings/update/' + booking.id}><button> update </button></Link>
-      </li>
-    )
-  })
+    var booking_dates = null;
+
+    if(!props.customer._embedded){
+      booking_dates = "no bookings yet!";
+    }else{
+      booking_dates = props.customer._embedded.bookings.map((booking) => {
+        return(
+          <li key= {booking.id} className = "customer-booking">
+              {booking.id}: {booking.date.slice(0,10)} at {booking.date.slice(14,19)} for {booking.numberOfCovers} people, receipt:{booking.receipt}
+               <Link to={'/bookings/update/' + booking.id}><button> update </button></Link>
+          </li>
+        )
+      })
+    }
+
+
 
   return(
     <div className="component">
