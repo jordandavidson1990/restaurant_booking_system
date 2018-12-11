@@ -194,3 +194,13 @@ margin: auto;
 padding: 20px;
 background-color: #ffbf69;
 }
+button.btn.btn-danger.btn-sm.w-2{
+  width:50%;
+  margin:auto;
+}
+
+div.single-booking-update-container{
+  display: grid;
+width: 50%;
+margin: auto;
+}

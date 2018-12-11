@@ -23,14 +23,18 @@ const SingleBookingUpdateForm = (props) => {
 
 
   return (
+
     <form onSubmit={handleSubmit}>
+    <div className="single-booking-update-container">
     <input type="text" placeholder="First Name" name="firstName" defaultValue={props.booking.customer.firstName}/>
     <input type="text" placeholder="Last Name" name="lastName" defaultValue={props.booking.customer.lastName}/>
     <input type="text" placeholder="Date" name="date" defaultValue={props.booking.date}/>
     <input type="number" placeholder="numberOfCovers" name="numberOfCovers" defaultValue={props.booking.numberOfCovers}/>
     <input type="number" placeholder="tableNumber" name="tableNumber" defaultValue={props.booking.tableNumber}/>
-    <button type="submit">Save</button>
+    <button className="btn btn-info"type="submit">Save</button>
+    </div>
     </form>
+
   )
 
 
