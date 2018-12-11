@@ -30,7 +30,7 @@ li{
 }
 
 
-.single-customer{
+.single-customer, .single-booking-container, .single-booking-container{
   background-color: #FFBF69;
   border: 2px solid #555;
   margin: 10px;
@@ -43,7 +43,7 @@ li{
   /* align-items: center; */
   padding: 0px;
 }
-a.single-customer-link{
+a.single-customer-link, a.single-booking{
   width:100%;
 }
 
@@ -106,7 +106,7 @@ display: table;
   width: auto;
 }
 
-div .single-table, .single-booking-container, label{
+div .single-table, label{
   border: 2px solid #555;
   padding:20px;
   background-color: #FFBF69;
@@ -129,7 +129,7 @@ label{
   background-color:
 }
 
-.single-containe{
+.single-container{
   height: 40px;
   /* padding-bottom: 100%; */
   display: block;
@@ -193,4 +193,14 @@ width: 50%;
 margin: auto;
 padding: 20px;
 background-color: #ffbf69;
+}
+button.btn.btn-danger.btn-sm.w-2{
+  width:50%;
+  margin:auto;
+}
+
+div.single-booking-update-container{
+  display: grid;
+width: 50%;
+margin: auto;
 }

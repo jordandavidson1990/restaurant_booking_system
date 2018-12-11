@@ -8,9 +8,6 @@ const Customer = (props) => {
 
   const reducer = (accumulator, currentValue) => accumulator + currentValue;
 
-
-
-
   function totalSpend(){
     let totalSpend;
     if(bookingArray.length > 0){
@@ -25,9 +22,11 @@ const Customer = (props) => {
 
 console.log(totalSpend);
 
-const id = props.customer.id
+
+  const id = props.customer.id
   return(
     <div className = "single-customer">
+
       <Link to={'/customers/' +id} className="single-customer-link">{id}
       <div className="customer-inner">
       <p> Name: {props.customer.firstName} {props.customer.lastName} </p>
@@ -36,6 +35,7 @@ const id = props.customer.id
       <p> Total Spent: £{totalSpend()}</p>
       </div>
       </Link>
+
     </div>
   )
 }

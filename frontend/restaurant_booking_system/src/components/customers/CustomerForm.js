@@ -19,7 +19,7 @@ const CustomerForm = (props) => {
       <input type="text" placeholder = "last Name" name = "lastName"/>
       <input type="text" placeholder = "email" name = "email"/>
       <input type="text" placeholder = "contact Number" name = "contactNumber"/>
-      <button className="btn" type="submit">register</button>
+      <button className="btn btn-info" type="submit">register</button>
 
     </form>
   )

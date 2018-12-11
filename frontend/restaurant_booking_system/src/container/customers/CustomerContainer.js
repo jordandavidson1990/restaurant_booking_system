@@ -1,6 +1,7 @@
 import React from "react";
 import CustomerList from "../../components/customers/CustomerList";
 import Request from "../../helpers/request";
+import CustomerFilterNameForm from "../../components/customers/CustomerFilterNameForm";
 
 class CustomerContainer extends React.Component{
   constructor(props){
@@ -8,6 +9,7 @@ class CustomerContainer extends React.Component{
     this.state = {
       customers:[]
     }
+    this.handleSearch = this.handleSearch.bind(this);
   }
 
   componentDidMount(){
@@ -26,11 +28,19 @@ class CustomerContainer extends React.Component{
     })
   }
 
+  handleSearch(search){
+    const filteredCustomers = this.state.customers.filter((customer) => {
+      return customer.lastName.includes(search)
+    })
+    this.setState({customers:filteredCustomers})
+  }
+
 
   render(){
     return(
       <div className = "customer-container">
         <h1> Customers </h1>
+        <CustomerFilterNameForm handleSearch = {this.handleSearch}/>
         <CustomerList customers = {this.state.customers}/>
       </div>
     )

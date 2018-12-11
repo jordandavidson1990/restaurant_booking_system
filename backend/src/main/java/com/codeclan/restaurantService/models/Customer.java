@@ -2,6 +2,8 @@ package com.codeclan.restaurantService.models;
 
 
 
+import org.hibernate.annotations.Cascade;
+
 import javax.persistence.*;
 import javax.persistence.Table;
 import java.io.Serializable;
@@ -29,7 +31,7 @@ public class Customer implements Serializable{
     private String contactNumber;
 
     @OneToMany(mappedBy = "customer")
-    // do we need a @Cascade here? check ship from week14/day4
+    @Cascade(org.hibernate.annotations.CascadeType.DELETE)
     private List<Booking> bookings;
 
     public Customer(String firstName, String lastName, String email, String contactNumber) {
