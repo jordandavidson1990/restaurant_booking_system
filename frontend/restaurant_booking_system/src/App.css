@@ -207,3 +207,11 @@ div.booking-options{
 .name{
   font-size: xx-large;
 }
+input.btn{
+  background-color: #17a2b8;
+  color:white;
+}
+form{
+  display: flex;
+  justify-content: center;
+}
