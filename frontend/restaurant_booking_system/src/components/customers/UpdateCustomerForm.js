@@ -17,11 +17,13 @@ const UpdateCustomerForm = (props) => {
 
   return (
     <form onSubmit={handleSubmit}>
+    <div className="single-booking-update-container">
       <input type="text" placeholder="first name" name="firstName" defaultValue={props.customer.firstName}/>
       <input type="text" placeholder="last name" name="lastName" defaultValue={props.customer.lastName}/>
       <input type="text" placeholder="email" name="email" defaultValue={props.customer.email}/>
       <input type="text" placeholder="contact number" name="contactNumber" defaultValue={props.customer.contactNumber}/>
-      <button className="btn"type="submit">save</button>
+      <button className="btn btn-info"type="submit">save</button>
+      </div>
     </form>
   )
 }
