@@ -31,6 +31,7 @@ const SingleBookingUpdateForm = (props) => {
     <input type="text" placeholder="Date" name="date" defaultValue={props.booking.date}/>
     <input type="number" placeholder="numberOfCovers" name="numberOfCovers" defaultValue={props.booking.numberOfCovers}/>
     <input type="number" placeholder="tableNumber" name="tableNumber" defaultValue={props.booking.tableNumber}/>
+    <input type = "number" placeholder = "receipt" name = "receipt" defaultValue = {props.booking.receipt}/>
     <button className="btn btn-info"type="submit">Save</button>
     </div>
     </form>

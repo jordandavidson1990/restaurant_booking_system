@@ -11,21 +11,6 @@ const SingleCustomer = (props) => {
   function onDelete() {
     props.handleDelete(props.customer.id)
   }
-const bookings = props.customer.bookings.map((booking) => {
-  const date = booking.date.slice(0,10);
-  const time = booking.date.slice(11,16);
-  return(
-    <li>
-      <Link to = {"/bookings/" +booking.id}>
-      <p>Date: {date}</p>
-      </Link>
-      <p>Time: {time}</p>
-      <p>Number of Guests: {booking.numberOfCovers}</p>
-      <p>Receipt: {booking.receipt}</p>
-    </li>
-
-  )
-})
 
 console.log(props.customer.bookings);
 
@@ -54,9 +39,6 @@ console.log(props.customer.bookings);
       <Link to={'/customers/update/' + props.customer.id}>
         <button className="btn m-2 btn-info">update customer</button>
       </Link>
-      <ul>
-        {bookings}
-      </ul>
 
       <button id="delete-button"className="btn btn-danger btn-sm"onClick={onDelete}>delete customer</button>
     </div>

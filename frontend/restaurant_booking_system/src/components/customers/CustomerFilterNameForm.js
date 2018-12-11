@@ -2,13 +2,6 @@ import React from "react";
 
 const CustomerFilterNameForm = (props) => {
 
-  function handleSubmit(event){
-    event.preventDefault();
-    const date = event.target.date.value;
-    console.log(date);
-    props.handleDateChange(date);
-  }
-
   function handleChange(event){
     event.preventDefault();
     // const search = event.target.lastName.value
@@ -19,7 +12,7 @@ const CustomerFilterNameForm = (props) => {
   }
 
   return(
-    <form onSubmit = {handleSubmit} >
+    <form >
       <input type="text" name="lastName" placeholder = "Last Name" onChange = {handleChange}/>
       <input className="btn" type = "submit" value = "Filter"/>
     </form>
