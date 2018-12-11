@@ -15,4 +15,5 @@ public interface EmbedInfoInBooking {
     Customer getCustomer();
     RestTable getRestTable();
     int getNumberOfCovers();
+    int getReceipt();
 }
