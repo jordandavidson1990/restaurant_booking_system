@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom"
+import moment from "moment";
 
 const SingleBooking = (props) => {
 
@@ -18,6 +19,8 @@ const SingleBooking = (props) => {
 
   const date =  props.booking.date
   const dateSorted = date.slice(0,10)
+  const formattedDate = moment(dateSorted).format("dddd Do MMM YYYY");
+
   const time = date.slice(11, 16)
   const id = props.booking.id
 
@@ -25,7 +28,7 @@ const SingleBooking = (props) => {
 
   return (
     <div className="component">
-    <p> Date : {dateSorted}</p>
+    <p> Date : {formattedDate}</p>
     <p> Time : {time}</p>
     <p>Customer: {props.booking.customer.firstName} {props.booking.customer.lastName}</p>
     <p>Number of Guests: {props.booking.numberOfCovers}</p>
