@@ -21,7 +21,7 @@ class App extends Component {
       <div>
         <Router>
           <React.Fragment>
-          <h1> Neil's Diner</h1>
+          <h1> G8 Beastro </h1>
             <NavBar/>
             <Switch>
               <Route exact path = "/today" component = {TodayBookingContainer}/>
