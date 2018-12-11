@@ -32,6 +32,8 @@ public class Booking {
 
     @Column
     private int numberOfCovers;
+    @Column
+    private int receipt;
 
     public Booking(Date date, Customer customer, RestTable restTable, int numberOfCovers) {
         this.date = date;
@@ -39,6 +41,15 @@ public class Booking {
         this.customer = customer;
         this.restTable = restTable;
         this.numberOfCovers = numberOfCovers;
+        this.receipt = 0;
+    }
+
+    public int getReceipt() {
+        return receipt;
+    }
+
+    public void setReceipt(int receipt) {
+        this.receipt = receipt;
     }
 
     public Booking() {
