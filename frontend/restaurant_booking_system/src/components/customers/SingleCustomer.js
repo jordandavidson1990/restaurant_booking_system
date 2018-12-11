@@ -50,7 +50,7 @@ console.log(props.customer.bookings);
       booking_dates = props.customer._embedded.bookings.map((booking) => {
         return(
           <li key= {booking.id} className = "customer-booking">
-              {booking.id}: {booking.date.slice(0,10)} at {booking.date.slice(14,19)} for {booking.numberOfCovers} people, receipt:{booking.receipt}
+              {booking.id}: {booking.date.slice(0,10)} at {booking.date.slice(14,19)} for {booking.numberOfCovers} people, receipt £{booking.receipt}
                <Link to={'/bookings/update/' + booking.id}><button> update </button></Link>
           </li>
         )
