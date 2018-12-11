@@ -1,6 +1,7 @@
 import React from "react";
 import TableList from "../../components/tables/TableList"
 import Request from "../../helpers/request";
+import { Link } from "react-router-dom"
 
 class TableContainer extends React.Component{
   constructor(props){
@@ -24,9 +25,16 @@ class TableContainer extends React.Component{
       <div className = "restTable-container">
       <TableList className="table-tables"restTables = {this.state.restTables}/>
 
+      <Link to={"/restTables/new"} className="new-table"><button>Create Table</button></Link>
+
       </div>
       </>
     )
   }
 }
 export default TableContainer;
+
+
+// <Link to={'/bookings/update/' +id}
+// className="single-booking-update"><button>Update</button>
+// </Link>
