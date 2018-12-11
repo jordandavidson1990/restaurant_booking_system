@@ -29,7 +29,7 @@ body::after {
   margin:0;
   padding: 0;
   background-color: #FFBF69;
-  border: 1px solid #555;
+  border: 2px solid #555;
   width:100%;
   /* display: inline; */
   justify-content: space-between;
@@ -97,15 +97,18 @@ input{
   margin: 20px;
   width: 200px;
 }
-h1{
+h1, h3{
   background-color: #FFBF69;
   margin-top:10px;
   display: flex;
   justify-content: center;
   /* background-position: left; */
-  border: 2px green solid;
+  border: 2px black solid;
   margin: auto;
   width: 80%;
+}
+h3{
+  padding: 5px;
 }
 
 .booking-container{
@@ -220,6 +223,7 @@ div.single-booking-update-container{
   display: grid;
 width: 50%;
 margin: auto;
+justify-content: center;
 }
 div.booking-options{
   display:flex;
@@ -239,4 +243,7 @@ a.new-table{
   display:flex;
   justify-content: center;
   text-decoration: none;
+}
+.single-customer-booking-display{
+  padding-top: 0px;
 }
