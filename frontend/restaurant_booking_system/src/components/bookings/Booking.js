@@ -15,7 +15,9 @@ const id = props.booking.id
     className="single-booking">{dateSorted}
     <div className="booking-inner">
       <p> Time : {time}</p>
+      <div className="name">
       <p>Customer: {props.booking.customer.firstName} {props.booking.customer.lastName}</p>
+      </div>
       <p>Number of Guests: {props.booking.numberOfCovers}</p>
       <p> Table: {props.booking.restTable.tableNumber}</p>
     </div>

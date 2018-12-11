@@ -20,7 +20,7 @@ const BookingForm = (props) => {
 
   const tableOptions = props.tables.map((table) => {
     return(
-      <option key={table.id} value={table._links.self.href}>{table.tableNumber}</option>
+      <option key={table.id} value={table._links.self.href}>{table.tableNumber} (max covers: {table.maxCovers} )</option>
     )
   })
 
@@ -28,11 +28,13 @@ const BookingForm = (props) => {
 
     <form className="container" onSubmit = {handleSubmit}>
       <label htmlFor="date">Date & Time</label>
+      <div className="booking-options">
       <input className="m-4 border rounded" type="datetime-local" placeholder = "date" name = "date" required/>
       <select className="m-4 border rounded" name = "customer">
         {customerOptions}
       </select>
       <input className="m-4 border rounded" type="number" placeholder = "No. of Guests" name = "numberOfCovers" min="0" max="10" required/>
+      </div>
       <label htmlFor="table">Table</label>
       <select className="m-4 border rounded" name = "table">
 
