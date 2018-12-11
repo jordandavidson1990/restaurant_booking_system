@@ -32,7 +32,7 @@ const BookingForm = (props) => {
       <select className="m-4 border rounded" name = "customer">
         {customerOptions}
       </select>
-      <input className="m-4 border rounded" type="number" placeholder = "No. of Guests" name = "numberOfCovers"/>
+      <input className="m-4 border rounded" type="number" placeholder = "No. of Guests" name = "numberOfCovers" min="0" max="10"/>
       <label htmlFor="table">Table</label>
       <select className="m-4 border rounded" name = "table">
 
