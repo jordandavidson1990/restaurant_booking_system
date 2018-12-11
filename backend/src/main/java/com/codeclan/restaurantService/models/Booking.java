@@ -1,5 +1,7 @@
 package com.codeclan.restaurantService.models;
 
+import org.hibernate.annotations.Cascade;
+
 import javax.persistence.*;
 import javax.persistence.Table;
 import java.sql.Time;

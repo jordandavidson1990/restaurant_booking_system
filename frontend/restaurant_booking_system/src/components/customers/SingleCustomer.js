@@ -35,10 +35,21 @@ console.log(props.customer.bookings);
   const email = props.customer.email;
   const contactNumber = props.customer.contactNumber;
 
+  const booking_dates = props.customer.bookings.map((booking) => {
+    return(
+      <li key= {booking.id} className = "customer-booking">
+          {booking.date.slice(0,10)} at {booking.date.slice(14,19)} for {booking.numberOfCovers} people
+      </li>
+    )
+  })
+
   return(
     <div className="component">
       <p>Customer: {props.customer.firstName} {props.customer.lastName}</p>
-      <p> show list of bookings here </p>
+      <p> Bookings: </p>
+      <ul>
+        {booking_dates}
+      </ul>
 
       <Link to={'/customers/update/' + props.customer.id}>
         <button className="btn m-2 btn-info">update customer</button>
