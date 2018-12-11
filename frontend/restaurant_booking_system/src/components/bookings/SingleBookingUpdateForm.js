@@ -42,9 +42,6 @@ const SingleBookingUpdateForm = (props) => {
     <div className="single-booking-update-container">
     <h6>First Name:</h6><input className="m-4 border rounded" type="text" placeholder="First Name" name="firstName" defaultValue={props.booking.customer.firstName}/>
     <h6>Last Name:</h6><input className="m-4 border rounded" type="text" placeholder="Last Name" name="lastName" defaultValue={props.booking.customer.lastName}/>
-    // <h6>Existing Date:</h6><select className="m-4 border rounded" type="text" placeholder="nodate" name = "nodate" required>
-    //   {dateOptions}
-    // </select>
 
     <h6>New Date:</h6><input className="m-4 border rounded" type="datetime-local" placeholder="datetime-local" placeholder="date" name = "date" defaultValue={props.booking.date}/>
 
