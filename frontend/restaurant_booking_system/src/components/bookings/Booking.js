@@ -20,7 +20,6 @@ const id = props.booking.id
       <p>Number of Guests: {props.booking.numberOfCovers}</p>
       <p> Table: {props.booking.restTable.tableNumber}</p>
     </div>
-    </Link>
     </div>
   )
 }
