@@ -13,6 +13,7 @@ import TableContainer from "./container/tables/TableContainer";
 import SingleCustomerContainer from "./container/customers/SingleCustomerContainer";
 import UpdateCustomerFormContainer from "./container/customers/UpdateCustomerFormContainer";
 import TableFormContainer from "./container/tables/TableFormContainer";
+import TodayBookingContainer from "./container/bookings/TodayBookingContainer";
 
 class App extends Component {
   render() {
@@ -22,7 +23,7 @@ class App extends Component {
           <React.Fragment>
             <NavBar/>
             <Switch>
-              <Route exact path = "/today" component = {BookingContainer}/>
+              <Route exact path = "/today" component = {TodayBookingContainer}/>
             <Route exact path="/customers" component = {CustomerContainer}/>
             <Route exact path="/bookings" component = {BookingContainer}/>
             <Route exact path="/restTables" component = {TableContainer}/>
