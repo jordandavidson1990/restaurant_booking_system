@@ -1,7 +1,10 @@
 import React from "react";
+import Availability from "./Availability";
 // import 'bootstrap/dist/css/bootstrap.min.css';
 
 const BookingForm = (props) => {
+
+  var closerAvailableTimes = null;// <li>7:30</li>
 
   function checkDateAvailability(event){
     event.preventDefault();
@@ -9,6 +12,20 @@ const BookingForm = (props) => {
       "date": event.target.date.value
     }
     console.log(proposedDateTime);
+    // Do in another component to be rendered here:
+    // -  check bookings and get time responses (yes/no)
+    // -  const closerAvailableTimes = <li>7:30</li>
+
+    var availabilityOptions = [45,0,15];
+
+    closerAvailableTimes = availabilityOptions.map((timeFraction) => {
+      return(
+        <li key = {timeFraction} className = "availability-item">
+          <Availability proposedDateTime = {proposedDateTime} bookings = {props.bookings}/>
+        </li>
+      )
+    })
+
   }
 
   function handleSubmit(event){
@@ -40,6 +57,8 @@ const BookingForm = (props) => {
         <input className="m-4 border rounded" type="datetime-local" placeholder = "date" name = "date" required/>
         <button className="btn btn-info" type = "submit">check date</button>
       </form>
+
+      <ul>{closerAvailableTimes}</ul>
 
       <form className="container" onSubmit = {handleSubmit}>
         <label htmlFor="date">Date & Time</label>
