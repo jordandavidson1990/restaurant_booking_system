@@ -3,6 +3,14 @@ import React from "react";
 
 const BookingForm = (props) => {
 
+  function checkDateAvailability(event){
+    event.preventDefault();
+    const proposedDateTime = {
+      "date": event.target.date.value
+    }
+    console.log(proposedDateTime);
+  }
+
   function handleSubmit(event){
     event.preventDefault();
     const booking = {
@@ -26,23 +34,31 @@ const BookingForm = (props) => {
 
   return(
 
-    <form className="container" onSubmit = {handleSubmit}>
-      <label htmlFor="date">Date & Time</label>
-      <div className="booking-options">
-      <input className="m-4 border rounded" type="datetime-local" placeholder = "date" name = "date" required/>
-      <select className="m-4 border rounded" name = "customer">
-        {customerOptions}
-      </select>
-      <input className="m-4 border rounded" type="number" placeholder = "No. of Guests" name = "numberOfCovers" min="0" max="10" required/>
-      </div>
-      <label htmlFor="table">Table</label>
-      <select className="m-4 border rounded" name = "table">
+    <div>
+      <form onSubmit = {checkDateAvailability}>
+        <label htmlFor="date">Date & Time</label>
+        <input className="m-4 border rounded" type="datetime-local" placeholder = "date" name = "date" required/>
+        <button className="btn btn-info" type = "submit">check date</button>
+      </form>
 
-        {tableOptions}
-      </select>
-      <button className="btn btn-info" type = "submit">Save Booking</button>
+      <form className="container" onSubmit = {handleSubmit}>
+        <label htmlFor="date">Date & Time</label>
+        <div className="booking-options">
+        <input className="m-4 border rounded" type="datetime-local" placeholder = "date" name = "date" required/>
+        <select className="m-4 border rounded" name = "customer">
+          {customerOptions}
+        </select>
+        <input className="m-4 border rounded" type="number" placeholder = "No. of Guests" name = "numberOfCovers" min="0" max="10" required/>
+        </div>
+        <label htmlFor="table">Table</label>
+        <select className="m-4 border rounded" name = "table">
 
-    </form>
+          {tableOptions}
+        </select>
+        <button className="btn btn-info" type = "submit">Save Booking</button>
+
+      </form>
+    </div>
   )
 }
 

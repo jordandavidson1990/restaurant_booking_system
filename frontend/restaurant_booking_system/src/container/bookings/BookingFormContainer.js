@@ -8,7 +8,8 @@ class BookingFormContainer extends React.Component{
     super(props);
     this.state = {
       customers:[],
-      tables:[]
+      tables:[],
+      bookings:[]
     }
     this.handleBookingPost = this.handleBookingPost.bind(this);
   }
@@ -21,6 +22,10 @@ class BookingFormContainer extends React.Component{
 
     request.get('/api/restTables').then((data) => {
       this.setState({tables:data._embedded.restTables})
+    })
+
+    request.get('/api/bookings').then((data) => {
+      this.setState({bookings:data._embedded.bookings})
     })
   }
 
