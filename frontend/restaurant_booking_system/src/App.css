@@ -247,3 +247,6 @@ a.new-table{
 .single-customer-booking-display{
   padding-top: 0px;
 }
+header{
+  opacity: 0.9;
+}
