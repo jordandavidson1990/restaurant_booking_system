@@ -2,23 +2,44 @@ body{
   background-color: #CBF3F0;
   font-family:'Lobster Two', Helvetica, sans-serif;
   color: black;
+  /* background-image: url("./table_edit.png"); */
 }
+/* div {
+  width: 200px;
+  height: 200px;
+  display: block;
+  position: relative;
+} */
 
+body::after {
+  content: "";
+  background: url("./table_edit.png");
+  opacity: 0.1;
+  top: 0;
+  left: 30px;
+  bottom: 0px;
+  right: 30px;
+  position: absolute;
+  background-repeat: no-repeat;
+  background-size: 300px 300px;
+  z-index: -1;
+}
 .navbar-Sections li{
   list-style-type: none;
   margin:0;
   padding: 0;
   background-color: #FFBF69;
-  border: 1px solid #555;
+  border: 2px solid #555;
   width:100%;
   /* display: inline; */
   justify-content: space-between;
   overflow: hidden;
-  position:sticky;
+  position: sticky;
   text-align: center;
 }
 .navbar-Sections{
   display: flex;
+  font-size: x-large;
 }
 
 /* p{
@@ -74,16 +95,20 @@ h1, h2, p{
 }
 input{
   margin: 20px;
+  width: 200px;
 }
-h1{
+h1, h3{
   background-color: #FFBF69;
   margin-top:10px;
   display: flex;
   justify-content: center;
   /* background-position: left; */
-  border: 2px green solid;
+  border: 2px black solid;
   margin: auto;
   width: 80%;
+}
+h3{
+  padding: 5px;
 }
 
 .booking-container{
@@ -91,13 +116,6 @@ h1{
   padding:10px;
   text-align: center;
 }
-.navLink a{
-  color:black;
-}
-/*
-.table-item{
-display: table;
-} */
 
 .table-tables{
   display: inline;
@@ -116,6 +134,8 @@ div .single-table, label{
   color: black;
   display: block;
   text-decoration: none;
+  width:100%;
+  height:100%;
 }
 .restTable-container ul{
   display: flex;
@@ -126,7 +146,7 @@ div .single-table, label{
 label{
   text-align: center;
   font-family: 'Lobster Two', Helvetica, sans-serif;
-  background-color:
+  font-size: xx-large;
 }
 
 .single-container{
@@ -177,11 +197,10 @@ a{
   color: black;
 }
 
-/* form.container{
-  margin:0;
-} */
+
 form.container{
   margin:auto;
+  width:60%
 }
 
 div.component{
@@ -194,8 +213,9 @@ margin: auto;
 padding: 20px;
 background-color: #ffbf69;
 }
+
 button.btn.btn-danger.btn-sm.w-2{
-  width:50%;
+  width:100%;
   margin:auto;
 }
 
@@ -203,4 +223,30 @@ div.single-booking-update-container{
   display: grid;
 width: 50%;
 margin: auto;
+justify-content: center;
+}
+div.booking-options{
+  display:flex;
+}
+.name{
+  font-size: xx-large;
+}
+input.btn{
+  background-color: #17a2b8;
+  color:white;
+}
+form{
+  display: flex;
+  justify-content: center;
+}
+a.new-table{
+  display:flex;
+  justify-content: center;
+  text-decoration: none;
+}
+.single-customer-booking-display{
+  padding-top: 0px;
+}
+header{
+  opacity: 0.9;
 }

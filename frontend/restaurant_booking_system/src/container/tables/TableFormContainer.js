@@ -27,7 +27,10 @@ class TableFormContainer extends React.Component{
 
   render(){
     return(
+      <div className="customer-container">
+      <h1>Create New Table</h1>
       <TableForm tables = {this.state.tables} handleTablePost = {this.handleTablePost}/>
+      </div>
     )
   }
 

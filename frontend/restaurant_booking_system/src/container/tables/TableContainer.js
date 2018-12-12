@@ -25,7 +25,7 @@ class TableContainer extends React.Component{
       <div className = "restTable-container">
       <TableList className="table-tables"restTables = {this.state.restTables}/>
 
-      <Link to={"/restTables/new"} className="new-table"><button>Create Table</button></Link>
+      <Link to={"/restTables/new"} className="new-table"><button className="btn btn-info">Create Table</button></Link>
 
       </div>
       </>

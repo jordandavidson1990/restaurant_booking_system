@@ -7,20 +7,20 @@ class SingleBookingUpdateContainer extends React.Component{
   constructor(props){
     super(props);
     this.state = {
-      // bookings:[],
+      bookings:[],
       customers:[],
       tables:[],
       booking: null
     }
     this.handleBookingUpdate = this.handleBookingUpdate.bind(this)
-    // this.getBookings = this.getBookings.bind(this)
+    this.getBookings = this.getBookings.bind(this)
     this.getCustomers = this.getCustomers.bind(this)
     this.getRestTables = this.getRestTables.bind(this)
     this.getBooking = this.getBooking.bind(this)
   }
 
   componentDidMount(){
-    // this.getBookings()
+    this.getBookings()
     this.getCustomers()
     this.getRestTables()
     this.getBooking()
@@ -34,12 +34,12 @@ class SingleBookingUpdateContainer extends React.Component{
     })
   }
 
-  // getBookings(){
-  //   const request = new Request();
-  //   request.get('/api/bookings').then((data) => {
-  //     this.setState({bookings: data._embedded.bookings})
-  //   })
-  // }
+  getBookings(){
+    const request = new Request();
+    request.get('/api/bookings').then((data) => {
+      this.setState({bookings: data._embedded.bookings})
+    })
+  }
 
   getCustomers(){
     const request = new Request();
@@ -67,14 +67,17 @@ class SingleBookingUpdateContainer extends React.Component{
 
   render(){
     return(
+      <div className="booking-container">
+      <h1> Update Booking </h1>
       <SingleBookingUpdateForm
       booking={this.state.booking}
       customers = {this.state.customers}
       restTables = {this.state.restTables}
-      // bookings = {this.state.bookings}
+      bookings = {this.state.bookings}
       handleBookingUpdate = {this.handleBookingUpdate}
 
       />
+      </div>
     )
   }
 }

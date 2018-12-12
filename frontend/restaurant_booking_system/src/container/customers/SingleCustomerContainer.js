@@ -11,9 +11,12 @@ class SingleCustomerContainer extends Component {
     this.handleDelete = this.handleDelete.bind(this);
   }
 
+  
+// + '?projection=embedInfoInCustomer'
+
   componentDidMount() {
     let request = new Request()
-    const url = "/api/customers/" + this.props.id + '?projection=embedInfoInCustomer'
+    const url = "/api/customers/" + this.props.id
     request.get(url).then(data => {
       this.setState({customer: data})
     })

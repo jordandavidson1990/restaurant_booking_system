@@ -24,7 +24,10 @@ class CustomerFormContainer extends React.Component{
 
   render(){
     return(
+      <div className = "customer-container">
+        <h1> Create New Customer </h1>
       <CustomerForm handleCustomerPost = {this.handleCustomerPost}/>
+      </div>
     )
   }
 
