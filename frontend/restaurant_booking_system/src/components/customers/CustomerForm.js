@@ -14,7 +14,7 @@ const CustomerForm = (props) => {
   }
 
   return(
-    <form className="new-customer"onSubmit = {handleSubmit}>
+    <form className="update-container"onSubmit = {handleSubmit}>
       <input type="text" placeholder="first name" name="firstName"/>
       <input type="text" placeholder = "last Name" name = "lastName"/>
       <input type="text" placeholder = "email" name = "email"/>

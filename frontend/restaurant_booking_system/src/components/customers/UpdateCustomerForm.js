@@ -17,7 +17,7 @@ const UpdateCustomerForm = (props) => {
 
   return (
     <form onSubmit={handleSubmit}>
-    <div className="single-booking-update-container">
+    <div className="update-container">
       <input type="text" placeholder="first name" name="firstName" defaultValue={props.customer.firstName}/>
       <input type="text" placeholder="last name" name="lastName" defaultValue={props.customer.lastName}/>
       <input type="text" placeholder="email" name="email" defaultValue={props.customer.email}/>
