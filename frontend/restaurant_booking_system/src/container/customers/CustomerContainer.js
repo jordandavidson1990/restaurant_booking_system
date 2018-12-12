@@ -43,7 +43,6 @@ class CustomerContainer extends React.Component{
       <div className = "customer-container">
         <h1> Customers </h1>
         <CustomerFilterNameForm handleSearch = {this.handleSearch}/>
-<<<<<<< HEAD
         <h3>Ordered by frequency of visits</h3>
         <CustomerList customers = {this.state.filteredCustomers}/>
       </div>
