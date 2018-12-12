@@ -65,7 +65,7 @@ const SingleBookingUpdateForm = (props) => {
     </p>
     </div>
     <div>
-    <h6>Revised Booking:</h6><input className="m-4 border rounded" type="datetime-local" placeholder="datetime-local" placeholder="date" name = "date" defaultValue={props.booking.date} required/>
+    <h6>Revised Booking:</h6><input className="m-4 border rounded" type="datetime-local" placeholder="datetime-local" placeholder="date" name = "date" value={props.booking.date} required/>
     </div>
     <div>
     <h6>Number of Covers:</h6><input type="number" placeholder="numberOfCovers" name="numberOfCovers" defaultValue={props.booking.numberOfCovers}/>
