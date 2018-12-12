@@ -38,10 +38,13 @@ class UpdateCustomerFormContainer extends Component {
 
   render(){
     return (
+      <div>
+      <h1> Update Customer </h1>
       <UpdateCustomerForm
         customer={this.state.customer}
         handleCustomerUpdate={this.handleCustomerUpdate}
         />
+        </div>
     )
   }
 

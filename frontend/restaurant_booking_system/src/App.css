@@ -250,3 +250,23 @@ a.new-table{
 header{
   opacity: 0.9;
 }
+.update-container{
+background-color: #FFBF69;
+    border: 2px solid #555;
+    margin: auto;
+    width: 80%;
+    /* border-radius: 40px; */
+    padding: 0px;
+    display: table;
+    flex-wrap: wrap;
+    /* align-items: center; */
+    padding: 0px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+.btn{
+  display: flex;
+  margin:auto;
+}
