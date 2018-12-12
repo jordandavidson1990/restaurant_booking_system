@@ -35,7 +35,7 @@ console.log(totalSpend);
       <p> Name: {props.customer.firstName} {props.customer.lastName} </p>
       <p> Contacts: {props.customer.contactNumber}, email:{props.customer.email}</p>
       <p> Number of bookings: {props.customer.bookings.length} </p>
-      <p> Total Spent: £{totalSpend()}</p>
+      <p> Total Spend: £{totalSpend()}</p>
       </div>
       </Link>
 
