@@ -14,7 +14,7 @@ const CustomerFilterNameForm = (props) => {
   return(
     <form >
       <input type="text" name="lastName" placeholder = "Last Name" onChange = {handleChange}/>
-      <input className="btn" type = "submit" value = "Filter"/>
+      {/* <input type = "submit" value = "Filter"/> */}
     </form>
   )
 }

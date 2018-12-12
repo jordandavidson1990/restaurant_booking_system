@@ -26,6 +26,7 @@ const SingleBookingUpdateForm = (props) => {
   const dateSorted = date.slice(0,19)
   const formattedDate = moment(dateSorted).format("dddd Do MMM YYYY");
   const time = date.slice(11, 16)
+  const valueDate = date.slice(0,16)
   // const id = props.booking.id
 
 
@@ -49,7 +50,7 @@ const SingleBookingUpdateForm = (props) => {
     </p>
     </div>
     <div>
-    <h6>Revised Booking:</h6><input className="m-4 border rounded" type="datetime-local" placeholder="datetime-local" placeholder="date" name = "date" defaultValue={props.booking.date} required/>
+    <h6>Revised Booking:</h6><input className="m-4 border rounded" type="datetime-local" placeholder="datetime-local" placeholder="date" name = "date" value={valueDate} required/>
     </div>
     <div>
     <h6>Number of Covers:</h6><input type="number" placeholder="numberOfCovers" name="numberOfCovers" defaultValue={props.booking.numberOfCovers}/>
