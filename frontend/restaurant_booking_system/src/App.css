@@ -5,10 +5,10 @@ body{
   /* background-image: url("./table_edit.png"); */
 }
 /* div {
-  width: 200px;
-  height: 200px;
-  display: block;
-  position: relative;
+width: 200px;
+height: 200px;
+display: block;
+position: relative;
 } */
 
 body::after {
@@ -171,9 +171,9 @@ label{
   /* height: 0; */
 }
 /* .customer-container li{
-  /* display: inline; */
-  /* max-width: 50%;
-  flex-basis: 50%;
+/* display: inline; */
+/* max-width: 50%;
+flex-basis: 50%;
 } */
 .customer-container ul{
   display: flex;
@@ -204,14 +204,14 @@ form.container{
 }
 
 div.component{
-display: grid;
-justify-content: center;
-text-align: center;
-border: 2px solid;
-width: 50%;
-margin: auto;
-padding: 20px;
-background-color: #ffbf69;
+  display: grid;
+  justify-content: center;
+  text-align: center;
+  border: 2px solid;
+  width: 50%;
+  margin: auto;
+  padding: 20px;
+  background-color: #ffbf69;
 }
 
 button.btn.btn-danger.btn-sm.w-2{
@@ -221,9 +221,9 @@ button.btn.btn-danger.btn-sm.w-2{
 
 div.single-booking-update-container{
   display: grid;
-width: 50%;
-margin: auto;
-justify-content: center;
+  width: 50%;
+  margin: auto;
+  justify-content: center;
 }
 div.booking-options{
   display:flex;
@@ -251,22 +251,45 @@ header{
   opacity: 0.9;
 }
 .update-container{
-background-color: #FFBF69;
-    border: 2px solid #555;
-    margin: auto;
-    width: 80%;
-    /* border-radius: 40px; */
-    padding: 0px;
-    display: table;
-    flex-wrap: wrap;
-    /* align-items: center; */
-    padding: 0px;
-    margin-top: 40px;
-    margin-bottom: 20px;
-    padding-bottom: 20px;
-    padding-top: 20px;
+  background-color: #FFBF69;
+  border: 2px solid #555;
+  margin: auto;
+  width: 80%;
+  /* border-radius: 40px; */
+  padding: 0px;
+  display: flex;
+  flex-wrap: wrap;
+  /* align-items: center; */
+  padding: 0px;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  padding-top: 20px;
 }
 .btn{
   display: flex;
   margin:auto;
+}
+
+.update-box
+{background-color: #FFBF69;
+  border: 2px solid #555;
+  margin: auto;
+  width: 100%;
+  /* border-radius: 40px; */
+  padding: 0px;
+  display: table;
+  flex-wrap: wrap;
+  /* align-items: center; */
+  padding: 0px;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
+.filter-search{
+  display: grid;
+  justify-content: center;
+  margin: auto;
+  width: 0;
 }
