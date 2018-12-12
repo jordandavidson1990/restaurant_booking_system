@@ -72,6 +72,18 @@ public class DataLoader implements ApplicationRunner {
         RestTable table4 = new RestTable(4,2);
         restTableRepository.save(table4);
 
+        RestTable table5 = new RestTable(5,2);
+        restTableRepository.save(table5);
+
+        RestTable table6 = new RestTable(6, 4);
+        restTableRepository.save(table6);
+
+        RestTable table7 = new RestTable(7,8);
+        restTableRepository.save(table7);
+
+        RestTable table8 = new RestTable(8,2);
+        restTableRepository.save(table8);
+
         Booking booking1 = new Booking(date01 , customer1, table2, 3,0);
 
         booking1.setReceipt(50);
