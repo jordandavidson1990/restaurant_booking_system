@@ -6,19 +6,6 @@ const SingleBookingUpdateForm = (props) => {
 
   function handleSubmit(event){
     event.preventDefault();
-  //   if (props.booking.customer.bookings.length > 5) {
-  //     const booking = {
-  //       "id": props.booking.id,
-  //
-  //       "firstName": event.target.firstName.value,
-  //       "lastName": event.target.lastName.value,
-  //       "date": event.target.date.value,
-  //       "numberOfCovers": event.target.numberOfCovers.value,
-  //       "tableNumber": event.target.tableNumber.value,
-  //       "receipt":parseInt(event.target.receipt.value) * 0.8
-  //   }
-  // }
-  console.log(props.booking.customer);
     const booking = {
       "id": props.booking.id,
 
@@ -26,8 +13,7 @@ const SingleBookingUpdateForm = (props) => {
       "lastName": event.target.lastName.value,
       "date": event.target.date.value,
       "numberOfCovers": event.target.numberOfCovers.value,
-      "tableNumber": event.target.tableNumber.value,
-      "receipt":parseInt(event.target.receipt.value)
+      "tableNumber": event.target.tableNumber.value
     }
     props.handleBookingUpdate(booking)
   }
@@ -53,16 +39,14 @@ const SingleBookingUpdateForm = (props) => {
 
   return (
 
-    <form className="container" onSubmit={handleSubmit}>
-    <div className="single-booking-update-container">
+    <form className="update-container" onSubmit={handleSubmit}>
     <div>
-    <h6>First Name:</h6><input className="m-4 border rounded" type="text" placeholder="First Name" name="firstName" defaultValue={props.booking.customer.firstName}/>
-    </div>
-    <h6>Last Name:</h6><input className="m-4 border rounded" type="text" placeholder="Last Name" name="lastName" defaultValue={props.booking.customer.lastName}/>
+    <h6>First Name:</h6><input  type="text" placeholder="First Name" name="firstName" defaultValue={props.booking.customer.firstName}/>
+    <h6>Last Name:</h6><input type="text" placeholder="Last Name" name="lastName" defaultValue={props.booking.customer.lastName}/>
     </div>
     <div>
-    <h6>Existing Booking:</h6><p className="m-4 border rounded" type="text" placeholder="nodate" name = "nodate">
-      {formattedDate}
+    <h6>Existing Booking:</h6><p  type="text" placeholder="nodate" name = "nodate">
+    {formattedDate}
     </p>
     </div>
     <div>
@@ -75,7 +59,7 @@ const SingleBookingUpdateForm = (props) => {
     <h6>Table Number:</h6><input type="number" placeholder="tableNumber" name="tableNumber" defaultValue={props.booking.restTable.tableNumber}/>
     </div>
     <div>
-    <h6>Receipts:</h6><input type = "number" placeholder = "receipt" name = "receipt" defaultValue = {props.booking.receipt}/>
+    <h6>Receipts:</h6><p type = "number" placeholder = "receipt" name = "receipt" defaultValue = {props.booking.receipt}/>
 
     <button className="btn btn-info"type="submit">Save</button>
     </div>
