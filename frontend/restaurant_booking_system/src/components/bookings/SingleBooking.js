@@ -37,7 +37,7 @@ const SingleBooking = (props) => {
     <Link to={'/bookings/update/' +id}
     className="single-booking-update"><button className="btn btn-info m-2">Update</button>
     </Link>
-    <button className="btn btn-danger btn-sm w-2"onClick={onDelete}>Delete Booking</button>
+    <button className="btn btn-danger btn-sm w-2" onClick={onDelete}>Delete Booking</button>
     </div>
     </div>
   )

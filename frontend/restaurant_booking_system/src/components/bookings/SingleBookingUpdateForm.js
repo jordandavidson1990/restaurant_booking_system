@@ -26,16 +26,16 @@ const SingleBookingUpdateForm = (props) => {
   const date = props.booking.date
   const dateSorted = date.slice(0,19)
   const formattedDate = moment(dateSorted).format("dddd Do MMM YYYY");
-  const time = date.slice(11, 16)
+  // const time = date.slice(11, 16)
   const valueDate = date.slice(0,16)
   // const id = props.booking.id
 
 
-  const dateOptions = props.bookings.map((booking) => {
-    return (
-      <option key={booking.id} value={booking._links.self.href}>{formattedDate} {time}</option>
-    )
-  })
+  // const dateOptions = props.bookings.map((booking) => {
+  //   return (
+  //     <option key={booking.id} value={booking._links.self.href}>{formattedDate} {time}</option>
+  //   )
+  // })
 
 
   return (
@@ -51,7 +51,7 @@ const SingleBookingUpdateForm = (props) => {
     </p>
     </div>
     <div>
-    <h6>Revised Booking:</h6><input className="m-4 border rounded" type="datetime-local" placeholder="datetime-local" placeholder="date" name = "date" value={valueDate} required/>
+    <h6>Revised Booking:</h6><input className="m-4 border rounded" type="datetime-local"  placeholder="datetime-local" name = "date" value={valueDate} required/>
     </div>
     <div>
     <h6>Number of Covers:</h6><input type="number" placeholder="numberOfCovers" name="numberOfCovers" defaultValue={props.booking.numberOfCovers}/>
@@ -71,3 +71,11 @@ const SingleBookingUpdateForm = (props) => {
 
 }
 export default SingleBookingUpdateForm;
+
+// NOTE:
+// h6 Revised Booking on line 54:
+// two conflicting properties for the same field:
+// placeholder="datetime-local"
+// placeholder="date"
+// which one is used and where?
+// Took the second one out.
