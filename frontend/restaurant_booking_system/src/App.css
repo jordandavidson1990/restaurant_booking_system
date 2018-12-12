@@ -293,3 +293,17 @@ header{
   margin: auto;
   width: 0;
 }
+button.btn.btn-danger.btn-sm.w-2 {
+    width: 50%;
+    margin: auto;
+}
+/* button.btn.btn-info.m-2{
+    width: 50%;
+    margin: auto;
+} */
+.btns{
+  display:flex;
+}
+form.update-container{
+  display: block;
+}

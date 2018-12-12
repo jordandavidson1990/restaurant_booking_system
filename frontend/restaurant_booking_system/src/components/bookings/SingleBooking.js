@@ -33,11 +33,12 @@ const SingleBooking = (props) => {
     <p>Customer: {props.booking.customer.firstName} {props.booking.customer.lastName}</p>
     <p>Number of Guests: {props.booking.numberOfCovers}</p>
     <p> Table: {props.booking.restTable.tableNumber}</p>
-
+<div className="btns">
     <Link to={'/bookings/update/' +id}
     className="single-booking-update"><button className="btn btn-info m-2">Update</button>
     </Link>
     <button className="btn btn-danger btn-sm w-2"onClick={onDelete}>Delete Booking</button>
+    </div>
     </div>
   )
 }
