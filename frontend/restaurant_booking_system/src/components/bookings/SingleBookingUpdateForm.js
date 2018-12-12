@@ -13,7 +13,8 @@ const SingleBookingUpdateForm = (props) => {
       "lastName": event.target.lastName.value,
       "date": event.target.date.value,
       "numberOfCovers": event.target.numberOfCovers.value,
-      "tableNumber": event.target.tableNumber.value
+      "tableNumber": event.target.tableNumber.value,
+      "receipt": event.target.receipt.value
     }
     props.handleBookingUpdate(booking)
   }
@@ -59,7 +60,7 @@ const SingleBookingUpdateForm = (props) => {
     <h6>Table Number:</h6><input type="number" placeholder="tableNumber" name="tableNumber" defaultValue={props.booking.restTable.tableNumber}/>
     </div>
     <div>
-    <h6>Receipts:</h6><p type = "number" placeholder = "receipt" name = "receipt" defaultValue = {props.booking.receipt}/>
+    <h6>Receipts:</h6><input type = "number" placeholder = "receipt" name = "receipt" defaultValue = {props.booking.receipt}/>
 
     <button className="btn btn-info"type="submit">Save</button>
     </div>
