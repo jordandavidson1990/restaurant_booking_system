@@ -35,20 +35,20 @@ public class Booking {
     @Column
     private int receipt;
 
-    public Booking(Date date, Customer customer, RestTable restTable, int numberOfCovers) {
+    public Booking(Date date, Customer customer, RestTable restTable, int numberOfCovers,int receipt) {
         this.date = date;
 //        this.time = time;
         this.customer = customer;
         this.restTable = restTable;
         this.numberOfCovers = numberOfCovers;
-        this.receipt = 0;
+        this.receipt = receipt;
     }
 
     public int getReceipt() {
         return receipt;
     }
 
-    public void setReceipt(int receipt) {
+    public void setReceipt(int receipt){
         this.receipt = receipt;
     }
 

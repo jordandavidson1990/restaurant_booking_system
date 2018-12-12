@@ -89,6 +89,10 @@ public class Customer implements Serializable{
         return bookings;
     }
 
+    public int getVisits(){
+        return this.bookings.size();
+    }
+
     public void setBookings(List<Booking> bookings) {
         this.bookings = bookings;
     }

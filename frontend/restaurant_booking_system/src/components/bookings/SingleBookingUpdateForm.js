@@ -6,6 +6,19 @@ const SingleBookingUpdateForm = (props) => {
 
   function handleSubmit(event){
     event.preventDefault();
+  //   if (props.booking.customer.bookings.length > 5) {
+  //     const booking = {
+  //       "id": props.booking.id,
+  //
+  //       "firstName": event.target.firstName.value,
+  //       "lastName": event.target.lastName.value,
+  //       "date": event.target.date.value,
+  //       "numberOfCovers": event.target.numberOfCovers.value,
+  //       "tableNumber": event.target.tableNumber.value,
+  //       "receipt":parseInt(event.target.receipt.value) * 0.8
+  //   }
+  // }
+  console.log(props.booking.customer);
     const booking = {
       "id": props.booking.id,
 
@@ -13,7 +26,8 @@ const SingleBookingUpdateForm = (props) => {
       "lastName": event.target.lastName.value,
       "date": event.target.date.value,
       "numberOfCovers": event.target.numberOfCovers.value,
-      "tableNumber": event.target.tableNumber.value
+      "tableNumber": event.target.tableNumber.value,
+      "receipt":parseInt(event.target.receipt.value)
     }
     props.handleBookingUpdate(booking)
   }

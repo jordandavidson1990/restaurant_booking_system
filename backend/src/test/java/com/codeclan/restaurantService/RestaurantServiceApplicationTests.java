@@ -80,7 +80,7 @@ public class RestaurantServiceApplicationTests {
 	@Test
 	public void customerCanAddBookingToOwnBookingList() {
 
-		Booking booking1 = new Booking(date, customer, table, 3);
+		Booking booking1 = new Booking(date, customer, table, 3,0);
 		bookingRepository.save(booking1);
 
 		customer.addBooking(booking1);
