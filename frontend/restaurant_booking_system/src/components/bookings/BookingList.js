@@ -15,8 +15,8 @@ const BookingList = (props) => {
 
   return(
     <ul>
-    {bookings}
-  </ul>
+      {bookings}
+    </ul>
   )
 }
 

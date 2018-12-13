@@ -4,7 +4,7 @@ import Availability from "./Availability";
 
 const BookingForm = (props) => {
 
-  var closerAvailableTimes = null;// <li>7:30</li>
+  var closerAvailableTimes = [];// <li>7:30</li>
 
   function checkDateAvailability(event){
     event.preventDefault();
@@ -15,7 +15,7 @@ const BookingForm = (props) => {
     // Do in another component to be rendered here:
     // -  check bookings and get time responses (yes/no)
     // -  const closerAvailableTimes = <li>7:30</li>
-
+    debugger;
     var availabilityOptions = [45,0,15];
 
     closerAvailableTimes = availabilityOptions.map((timeFraction) => {
@@ -25,7 +25,7 @@ const BookingForm = (props) => {
         </li>
       )
     })
-
+    return closerAvailableTimes;
   }
 
   function handleSubmit(event){
@@ -59,7 +59,9 @@ const BookingForm = (props) => {
         <button className="btn btn-info" type = "submit">check date</button>
       </form>
 
-      <ul>{closerAvailableTimes}</ul>
+      <ul>
+        {closerAvailableTimes}
+      </ul>
 
       <form className="container" onSubmit = {handleSubmit}>
         <label htmlFor="date">Date & Time</label>
@@ -72,7 +74,6 @@ const BookingForm = (props) => {
         </div>
         <label htmlFor="table">Table</label>
         <select className="m-4 border rounded" name = "table">
-
           {tableOptions}
         </select>
         <button className="btn btn-info" type = "submit">Save Booking</button>

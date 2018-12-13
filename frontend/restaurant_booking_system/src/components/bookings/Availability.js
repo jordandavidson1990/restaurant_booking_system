@@ -13,8 +13,12 @@ const formattedDate = moment(dateSorted).format("dddd Do MMM YYYY");
 const time = date.slice(11, 16)
 const id = props.booking.id
 
+// checking availability function here
+
+
+
   return(
-      <div>time: {props.proposedDateTime}</div>
+      <div>time: {date}</div>
   )
 }
 

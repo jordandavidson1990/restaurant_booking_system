@@ -39,7 +39,7 @@ class BookingFormContainer extends React.Component{
 
 render(){
   return(
-    <BookingForm tables = {this.state.tables} customers = {this.state.customers} handleBookingPost = {this.handleBookingPost}/>
+    <BookingForm tables = {this.state.tables} customers = {this.state.customers} bookings = {this.state.bookings} handleBookingPost = {this.handleBookingPost}/>
   )
 }
 }
