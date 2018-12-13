@@ -8,7 +8,7 @@ class SingleBookingContainer extends Component {
     this.state = {
       booking: null
     }
-    this.handleDelete = this.handleDelete.bind(this);
+    this.handleDeleteBooking = this.handleDeleteBooking.bind(this);
   }
 
   componentDidMount(){
@@ -19,18 +19,12 @@ class SingleBookingContainer extends Component {
     })
   }
 
-  handleDelete(id){
+  handleDeleteBooking(id){
     const url = "/api/bookings/" + id;
     let request = new Request()
     request.delete(url).then(() => {
       window.location = "/bookings"
     })
-  }
-
-  render(){
-    return (
-      <SingleBooking booking={this.state.booking} handleDelete={this.handleDelete}/>
-    )
   }
 
   handleOnClick(id){
@@ -41,10 +35,9 @@ class SingleBookingContainer extends Component {
     })
   }
 
-
   render(){
-    return(
-      <SingleBooking booking={this.state.booking} handleOnClick={this.handleOnClick}/>
+    return (
+      <SingleBooking booking={this.state.booking} handleOnClick={this.handleOnClick} handleDelete={this.handleDeleteBooking}/>
     )
   }
 

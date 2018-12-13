@@ -7,7 +7,8 @@ class CustomerContainer extends React.Component{
   constructor(props){
     super(props);
     this.state = {
-      customers:[]
+      customers:[],
+      filteredCustomers:[]
     }
     this.handleSearch = this.handleSearch.bind(this);
   }
@@ -25,6 +26,7 @@ class CustomerContainer extends React.Component{
       })
 
       this.setState({customers:sortedCustomers})
+      this.setState({filteredCustomers:sortedCustomers})
     })
   }
 
@@ -32,7 +34,7 @@ class CustomerContainer extends React.Component{
     const filteredCustomers = this.state.customers.filter((customer) => {
       return customer.lastName.includes(search)
     })
-    this.setState({customers:filteredCustomers})
+    this.setState({filteredCustomers:filteredCustomers})
   }
 
 
@@ -41,7 +43,8 @@ class CustomerContainer extends React.Component{
       <div className = "customer-container">
         <h1> Customers </h1>
         <CustomerFilterNameForm handleSearch = {this.handleSearch}/>
-        <CustomerList customers = {this.state.customers}/>
+        <h3>Ordered by frequency of visits</h3>
+        <CustomerList customers = {this.state.filteredCustomers}/>
       </div>
     )
   }

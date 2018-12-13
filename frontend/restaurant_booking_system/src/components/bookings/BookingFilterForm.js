@@ -10,7 +10,7 @@ const BookingFilterForm = (props) => {
   }
 
   return(
-    <form onSubmit = {handleSubmit} >
+    <form className="filter-search" onSubmit = {handleSubmit} >
       <input type="date" name="date"/>
       <input className="btn" type = "submit" value = "Filter By Date"/>
     </form>

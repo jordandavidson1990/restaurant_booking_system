@@ -11,12 +11,9 @@ const Customer = (props) => {
   function totalSpend(){
     let totalSpend;
     if(bookingArray.length > 0){
-
-    const spending = bookingArray.map((booking) => {
-      return parseInt(booking.receipt);
-    })
-    console.log(bookingArray);
-    totalSpend = spending.reduce(reducer)
+    totalSpend = bookingArray.map((booking) => {
+      return booking.receipt;
+    }).reduce(reducer);
   } else{
     totalSpend = 0;
   }
@@ -33,9 +30,10 @@ console.log(totalSpend);
       <Link to={'/customers/' +id} className="single-customer-link">{id}
       <div className="customer-inner">
       <p> Name: {props.customer.firstName} {props.customer.lastName} </p>
-      <p> Contacts: {props.customer.contactNumber}, email:{props.customer.email}</p>
-      <p> Number of bookings: {props.customer.bookings.length} </p>
-      <p> Total Spent: £{totalSpend()}</p>
+      <p> Contact Number:  {props.customer.contactNumber}</p>
+      <p> Email: {props.customer.email}</p>
+      <p> Number of bookings:  {props.customer.bookings.length} </p>
+      <p> Total Spend: £{totalSpend()}</p>
       </div>
       </Link>
 
