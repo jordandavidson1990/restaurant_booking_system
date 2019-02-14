@@ -9,9 +9,6 @@ const SingleBooking = (props) => {
     return null;
   }
 
-  // const customers = props.booking.customers.map((customer, index) => {
-  //   return <li key={index}>{customer.firstName} {customer.lastName}</li>
-  // })
 
   function onDelete(){
     props.handleDelete(props.booking.id)
